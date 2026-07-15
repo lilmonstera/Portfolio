@@ -6,7 +6,7 @@
     <title>Lorena Gouws | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
@@ -29,8 +29,8 @@
         <section class="hero-section">
           <div class="hero-copy">
             <p class="eyebrow">creative portfolio</p>
-            <h1>Hi, I’m Lorena. I build bold digital experiences for fresh brands.</h1>
-            <p class="hero-description">A Gen Z creative blending clean design, playful motion, and thoughtful UI for experiential websites.</p>
+            <h1>Hi, I'm <em>Lorena</em> — I build things on the web, and I'm just getting started.</h1>
+            <h2 class="subhead">Junior web developer and designer with a growth mindset and a portfolio to prove it.</h2>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#work">See my work</a>
               <a class="btn btn-secondary" href="#contact">Let's collaborate</a>
@@ -52,8 +52,12 @@
           </div>
           <div class="about-grid">
             <div class="about-copy">
-              <p>I help brands stand out with work that feels effortless, optimistic, and authentic. My process is grounded in research, refined by strong visual language, and built to connect.</p>
-              <p>Whether it’s a launch site, brand refresh, or digital product, I love creating work that is playful but not loud, clean but memorable.</p>
+              <p>I taught myself to code, then went and did it for real — shipping two live websites for a Webflow agency, learning Python and C through Harvard's CS50, and now deep in a full-stack bootcamp because one language was never going to be enough. I'm not the finished product. I'm the developer who shows up, asks the right questions, and gets better every single week.</p>
+
+              <h3 class="block-title">What I bring</h3>
+              <p>Real client work, not just tutorials. At PurpleGlobe, I designed and built two professional websites from the ground up — CMS setup, copywriting, imagery, layout, the lot — for a fast-paced, deadline-driven team that trusted me with their front end.</p>
+
+              <p>Credibility that isn't just self-reported: my former manager at PurpleGlobe called my work diligent and detail-oriented, with a solid grasp of both the design and development sides of front-end work. My support coach at UCT Online High School described me as proactive, punctual, and unafraid to ask for help when I need it — which, in this industry, is a feature, not a bug.</p>
               <div class="skill-tags">
                 <span>UI / UX</span>
                 <span>Brand Design</span>
@@ -62,8 +66,9 @@
               </div>
             </div>
             <div class="about-card">
+              <span class="card-kicker">At a glance</span>
               <div class="about-card-inner">
-                <p>Based in Cape Town.</p>
+                <p>Based in Johannesburg.</p>
                 <p>Open to freelance + internships.</p>
                 <p>Favourite energy: calm, confident, slightly quirky.</p>
               </div>
@@ -77,23 +82,39 @@
             <h2>projects with soft color, sharp details, and playful motion.</h2>
           </div>
           <div class="project-grid">
-            <article class="project-card">
-              <div class="project-tag">Brand</div>
-              <h3>Bloom Studio</h3>
-              <p>Minimal branding with a bright pastel palette and custom type-led layouts.</p>
-              <a href="#contact">View project</a>
+            <article class="project-card project-card--feature">
+              <div class="project-visual" aria-hidden="true"></div>
+              <div class="project-copy">
+                <div class="project-meta">
+                  <span class="project-index">01</span>
+                  <div class="project-tag">Brand</div>
+                </div>
+                <h3>Bloom Studio</h3>
+                <p>Minimal branding with a bright pastel palette and custom type-led layouts.</p>
+                <a href="#contact">View project</a>
+              </div>
             </article>
             <article class="project-card">
-              <div class="project-tag">UX</div>
-              <h3>Fresh Market</h3>
-              <p>Vibrant e-commerce experiences with clean content hierarchy and joyful motion.</p>
-              <a href="#contact">View project</a>
+              <div class="project-copy">
+                <div class="project-meta">
+                  <span class="project-index">02</span>
+                  <div class="project-tag">UX</div>
+                </div>
+                <h3>Fresh Market</h3>
+                <p>Vibrant e-commerce experiences with clean content hierarchy and joyful motion.</p>
+                <a href="#contact">View project</a>
+              </div>
             </article>
             <article class="project-card">
-              <div class="project-tag">Web</div>
-              <h3>Neon Cafe</h3>
-              <p>Responsive landing page design with pastel gradients, bold visuals, and subtle hover effects.</p>
-              <a href="#contact">View project</a>
+              <div class="project-copy">
+                <div class="project-meta">
+                  <span class="project-index">03</span>
+                  <div class="project-tag">Web</div>
+                </div>
+                <h3>Neon Cafe</h3>
+                <p>Responsive landing page design with pastel gradients, bold visuals, and subtle hover effects.</p>
+                <a href="#contact">View project</a>
+              </div>
             </article>
           </div>
         </section>
@@ -132,13 +153,42 @@
             </div>
             <a class="btn btn-primary" href="mailto:hello@lorenagouws.com">Say hi</a>
           </div>
-          <div class="contact-meta">
-            <span>Instagram</span>
-            <span>LinkedIn</span>
-            <span>Dribbble</span>
-          </div>
         </section>
       </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <div class="brand">
+                <span class="brand-mark">LG</span>
+                <span class="brand-text">lorena.</span>
+              </div>
+              <p>Building playful, polished web experiences with a soft, pastel edge.</p>
+            </div>
+
+            <div class="footer-contact">
+              <h4>Get in touch</h4>
+              <a class="btn btn-primary" href="mailto:hello@lorenagouws.com">Contact me</a>
+              <p><a href="mailto:hello@lorenagouws.com">hello@lorenagouws.com</a></p>
+              <p>Johannesburg, South Africa</p>
+            </div>
+
+            <div class="footer-socials">
+              <h4>Elsewhere</h4>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/lorenagouws/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/lilmonstera" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://dribbble.com/lorena2gouws" target="_blank" rel="noopener noreferrer">Dribbble</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>&copy; 2026 Lorena Gouws. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
