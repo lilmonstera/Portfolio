@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Lorena Gouws</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand">
+          <span class="brand-mark">LG</span>
+          <span class="brand-text">lorena.</span>
+        </div>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="index.html#about">About</a>
+          <a href="index.html#work">Work</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="contact-hero">
+          <p class="eyebrow">Get in touch</p>
+          <h1>Don't be shy, <em>say hi!</em></h1>
+          <h2 class="subhead">Have a project in mind or just want to chat? Fill out the form below and I'll get back to you soon.</h2>
+        </section>
+
+        <section class="contact-form-section">
+          <form class="contact-form">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-row">
+              <label for="number">Phone Number</label>
+              <input type="tel" id="number" name="number" placeholder="Optional" required />
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me a little about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <div class="brand">
+                <span class="brand-mark">LG</span>
+                <span class="brand-text">lorena.</span>
+              </div>
+              <p>Building playful, polished web experiences with a soft, pastel edge.</p>
+            </div>
+
+            <div class="footer-contact">
+              <h4>Get in touch</h4>
+              <a class="btn btn-primary" href="mailto:hello@lorenagouws.com">Contact me</a>
+              <p><a href="mailto:hello@lorenagouws.com">hello@lorenagouws.com</a></p>
+              <p>Johannesburg, South Africa</p>
+            </div>
+
+            <div class="footer-socials">
+              <h4>Elsewhere</h4>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/lorenagouws/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/lilmonstera" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://dribbble.com/lorena2gouws" target="_blank" rel="noopener noreferrer">Dribbble</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>&copy; 2026 Lorena Gouws. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
