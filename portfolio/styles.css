@@ -587,8 +587,8 @@ a {
 }
 
 .site-footer {
+  width: 100%;
   margin-top: 6rem;
-  padding: 3rem 0 2rem;
   background: var(--cream);
   border-top: 1px solid var(--border);
 }
@@ -597,6 +597,7 @@ a {
   width: min(100%, calc(100% - 2rem));
   max-width: var(--max-width);
   margin: 0 auto;
+  padding: 3rem 0;
 }
 
 .footer-top {
