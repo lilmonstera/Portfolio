@@ -42,9 +42,21 @@ hr.rule.thin{ border-top:1px solid var(--rule-soft); }
   font-family:'IBM Plex Mono', monospace;
   font-size:11px; letter-spacing:.06em; text-transform:uppercase;
   display:flex; justify-content:space-between; align-items:center;
-  padding:10px 0; opacity:.72;
+  padding:14px 0; gap:16px; flex-wrap:wrap;
 }
-.edition-toggle{ display:flex; align-items:center; gap:10px; font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; }
+.edition-toggle{ display:flex; align-items:center; gap:10px; font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; opacity:.72; }
+
+.site-nav{ display:flex; align-items:center; gap:22px; }
+.site-nav a{
+  border-bottom:1px solid transparent; padding-bottom:3px; opacity:.7;
+  transition:border-color var(--transition), color var(--transition), opacity var(--transition);
+}
+.site-nav a:hover{ border-bottom-color:var(--cherry); color:var(--cherry); opacity:1; }
+.site-nav a.current{ color:var(--cherry); border-bottom-color:var(--cherry); opacity:1; }
+@media(max-width:480px){
+  .topbar{ justify-content:center; text-align:center; }
+  .site-nav{ gap:16px; }
+}
 .switch{
   width:44px; height:22px; border-radius:12px; border:1.5px solid var(--ink);
   position:relative; cursor:pointer; flex:none; background:transparent;
@@ -115,6 +127,16 @@ article:last-child{ margin-bottom:0; }
 .lead-body p::first-letter{
   font-family:'Fraunces', serif; font-weight:900; font-size:54px; float:left; line-height:.8; padding:4px 8px 0 0; color:var(--cherry);
 }
+
+.pull-quote{
+  margin:22px 0; padding:4px 0 4px 22px; border-left:3px solid var(--cherry);
+  font-family:'Fraunces', serif; font-style:italic; font-weight:600; font-size:21px; line-height:1.35; color:var(--ink);
+}
+.pull-quote cite{
+  display:block; margin-top:8px; font-family:'IBM Plex Mono', monospace; font-style:normal; font-size:10px;
+  text-transform:uppercase; letter-spacing:.08em; opacity:.6;
+}
+.pull-quote cite::before{ content:"— "; }
 
 .story h3{ font-family:'Fraunces', serif; font-weight:600; font-size:19px; line-height:1.15; margin-bottom:6px; }
 .story p{ font-size:14.5px; line-height:1.7; opacity:.88; }
@@ -199,3 +221,53 @@ footer{
 }
 
 .hidden{ display:none !important; }
+
+/* ---------------- contact page ---------------- */
+.contact-grid{
+  display:grid; grid-template-columns:1.3fr 1fr; gap:44px;
+  border-top:1.5px solid var(--rule); padding:26px 0 60px;
+}
+@media(max-width:800px){ .contact-grid{ grid-template-columns:1fr; } }
+
+.contact-lead .dek{
+  font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:17px; opacity:.75; margin:14px 0 22px; max-width:480px;
+}
+
+.contact-form{ display:flex; flex-direction:column; gap:18px; max-width:480px; }
+.field{ display:flex; flex-direction:column; gap:6px; }
+.field label{
+  font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; opacity:.65;
+}
+.field input, .field textarea{
+  font-family:'Source Serif 4', serif; font-size:15px; color:var(--ink);
+  background:var(--paper-2); border:1px solid var(--rule); border-radius:3px; padding:10px 12px;
+  transition:border-color var(--transition), background var(--transition);
+}
+.field input:focus, .field textarea:focus{
+  outline:none; border-color:var(--cherry);
+}
+.field textarea{ resize:vertical; min-height:120px; font-family:inherit; line-height:1.6; }
+.submit-btn{
+  align-self:flex-start;
+  font-family:'IBM Plex Mono', monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:.06em;
+  background:var(--ink); color:var(--paper); border:1.5px solid var(--ink);
+  padding:10px 22px; border-radius:2px; cursor:pointer;
+  transition:background var(--transition), color var(--transition);
+}
+.submit-btn:hover{ background:var(--cherry); border-color:var(--cherry); }
+.form-note{
+  font-family:'IBM Plex Mono', monospace; font-size:10.5px; opacity:.5; text-transform:uppercase; letter-spacing:.05em;
+}
+
+.letters-box{
+  border:1px solid var(--rule); border-radius:4px; padding:24px 22px; background:var(--paper-2);
+}
+.letters-box .box-title{
+  font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:16px; color:var(--cherry); margin-bottom:14px;
+}
+.letters-box .row{
+  display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-top:1px dashed var(--rule-soft);
+  font-family:'IBM Plex Mono', monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:.04em;
+}
+.letters-box .row:first-of-type{ border-top:none; padding-top:0; }
+.letters-box .row a{ border-bottom:1px solid var(--rule); }

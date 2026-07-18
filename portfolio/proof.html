@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lorena — Proof of Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-edition="am">
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="edition-toggle">
+      <span id="edition-label">Limited Edition</span>
+      <button class="switch" id="editionSwitch" aria-label="Toggle limited and after-hours edition"></button>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Gazette</a>
+      <a href="proof.html" class="current">Proof</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <div class="masthead">
+    <div class="kicker">Design · Code · Story </div>
+    <h1>Lorena, <span>on the Record</span></h1>
+    <div class="tagline">"the work, before the business card"</div>
+  </div>
+
+  <div class="issue-line">
+    <span>Personal File — Proof of Work</span>
+    <span id="dateline">—</span>
+    <span id="edition-price">Founder Edition · South Africa</span>
+  </div>
+</div>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span>NATIONAL SCHOOL OF THE ARTS, STILL THE REFERENCE POINT</span>
+    <span>CS YEAR 1 CERTIFICATION IN PROGRESS, WEBSITE DESIGN SHORT COURSE ALONGSIDE IT</span>
+    <span>GITHUB.COM/LILMONSTERA NOW HOLDS FOUR LIVE PROJECTS</span>
+    <span>YA NOVEL "DUST & COUNSEL" AT DRAFT, THIRTY CHAPTERS PLOTTED</span>
+    <span>NATIONAL SCHOOL OF THE ARTS, STILL THE REFERENCE POINT</span>
+    <span>CS YEAR 1 CERTIFICATION IN PROGRESS, WEBSITE DESIGN SHORT COURSE ALONGSIDE IT</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="tabs" id="tabs">
+    <button class="tab-btn active" data-filter="all">All Sections</button>
+    <button class="tab-btn" data-filter="design">Design</button>
+    <button class="tab-btn" data-filter="development">Development</button>
+  </div>
+
+  <hr class="rule" style="margin-top:6px;">
+
+  <div class="front-page">
+    <div class="grid">
+
+      <div>
+        <article class="lead" data-section="design">
+          <div class="byline">Front Page · Personal File</div>
+          <div class="stamp">On the Record</div>
+          <div class="dek">This is the proof — what she trained in, what she taught herself, and what she's still building on the side.</div>
+          <div class="lead-body">
+            <p>It starts at the UCT OHS, which she still calls the defining achievement of her creative life — three years of being trained to treat design as a discipline rather than a talent you either have or don't. Everything since has been an argument for that same idea: that good work is built, not born.</p>
+            <p>She's self-taught on the code side — HTML, CSS, and JavaScript learned by shipping real sites rather than following a syllabus — and is now formalizing that with a Year 1 Computer Science certification and a Website Design short course through Red &amp; Yellow. In between, there's a novel she's plotting chapter by chapter, because the instinct to structure a story and the instinct to structure a client brief turned out to be the same instinct.</p>
+          </div>
+        </article>
+
+        <div>
+          <details open data-section="design">
+            <summary><h3>Skin Science — Aesthetic Clinic Site</h3><span class="plus">+</span></summary>
+            <p class="more">Two full builds for a startup aesthetic treatment business, with lead capture and integration into an external booking platform — designed to turn casual visitors into booked consultations without a hand-off to a third-party scheduler.</p>
+            <div class="tag-row"><span class="pill">Lead Capture</span><span class="pill">Booking Integration</span></div>
+          </details>
+          <details data-section="development">
+            <summary><h3>K53 Driving Test Prep</h3><span class="plus">+</span></summary>
+            <p class="more">A personal-use web app built to study for South Africa's K53 learner's test — no client brief, no deadline but her own, and proof that the same build habits hold up without a business behind them.</p>
+            <div class="tag-row"><span class="pill">Personal Build</span><span class="pill">Web App</span></div>
+          </details>
+          <details data-section="development">
+            <summary><h3>Nucleus.io Technology — Mock Brand Proposal</h3><span class="plus">+</span></summary>
+            <p class="more">A fictional South African tea brand built as a reference proposal — full strategy deck, content plan, and tone-of-voice, used to pressure-test a client toolkit before it ever reached a real business.</p>
+            <div class="tag-row"><span class="pill">Brand Strategy</span><span class="pill">Proposal Writing</span></div>
+          </details>
+        </div>
+      </div>
+
+      <div class="col-rule">
+        <article class="story" data-section="design">
+          <div class="byline">Training</div>
+          <h3>National School of the Arts</h3>
+          <p>Still the reference point for everything she builds — the place that taught her design is a discipline, not a decoration, and the achievement she comes back to first when asked what she's proudest of.</p>
+        </article>
+        <hr class="rule thin" style="margin:20px 0;">
+        <article class="story" data-section="development">
+          <div class="byline">Coursework</div>
+          <h3>Harvard EDX CS50 </h3>
+          <p> </p>
+        </article>
+        <hr class="rule thin" style="margin:20px 0;">
+        <article class="story" data-section="development">
+          <div class="byline">Code</div>
+          <h3>github.com/lilmonstera</h3>
+          <p>Where the actual repos live — client builds, personal projects, and the occasional experiment that never made it to a portfolio page.</p>
+        </article>
+        <hr class="rule thin" style="margin:20px 0;">
+        <article class="story" data-section="writing">
+          <div class="byline">Off the Clock</div>
+          <h3>Still Writing, Chapter by Chapter</h3>
+          <p>The novel isn't a client deliverable and never will be — it's proof that the same care for structure and voice applies whether or not anyone's paying for it.</p>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="classifieds">
+  <div class="wrap">
+    <div class="section-title">Exhibits — Proof on File</div>
+    <div class="section-sub">Tap an exhibit for the fine print</div>
+    <div class="ads" id="ads">
+      <div class="ad"><div class="ad-inner">
+        <div class="ad-face ad-front"><div class="ad-tag">Training</div><div class="ad-title">National School of the Arts</div><div class="ad-tag">Tap for details →</div></div>
+        <div class="ad-face ad-back"><div class="ad-tag">Discipline</div><div class="ad-price">Design, treated as craft — not talent</div></div>
+      </div></div>
+      <div class="ad"><div class="ad-inner">
+        <div class="ad-face ad-front"><div class="ad-tag">Coursework</div><div class="ad-title">CS Year 1 Certification</div><div class="ad-tag">Tap for details →</div></div>
+        <div class="ad-face ad-back"><div class="ad-tag">In progress at</div><div class="ad-price">Red &amp; Yellow Creative School of Business</div></div>
+      </div></div>
+      <div class="ad"><div class="ad-inner">
+        <div class="ad-face ad-front"><div class="ad-tag">Coursework</div><div class="ad-title">Website Design Short Course</div><div class="ad-tag">Tap for details →</div></div>
+        <div class="ad-face ad-back"><div class="ad-tag">In progress at</div><div class="ad-price">Red &amp; Yellow Creative School of Business</div></div>
+      </div></div>
+      <div class="ad"><div class="ad-inner">
+        <div class="ad-face ad-front"><div class="ad-tag">Code</div><div class="ad-title">github.com/lilmonstera</div><div class="ad-tag">Tap for details →</div></div>
+        <div class="ad-face ad-back"><div class="ad-tag">Currently hosting</div><div class="ad-price">Client builds and personal projects</div></div>
+      </div></div>
+      <div class="ad"><div class="ad-inner">
+        <div class="ad-face ad-front"><div class="ad-tag">Fiction</div><div class="ad-title">Dust &amp; Counsel</div><div class="ad-tag">Tap for details →</div></div>
+        <div class="ad-face ad-back"><div class="ad-tag">Status</div><div class="ad-price">30 chapters plotted, drafting in progress</div></div>
+      </div></div>
+      <div class="ad"><div class="ad-inner">
+        <div class="ad-face ad-front"><div class="ad-tag">Brand</div><div class="ad-title">Kozi Tea Co.</div><div class="ad-tag">Tap for details →</div></div>
+        <div class="ad-face ad-back"><div class="ad-tag">Built as</div><div class="ad-price">A mock proposal, treated like a real client</div></div>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <footer>
+    <span>Lorena — Personal Portfolio</span>
+    <span>Printed daily, believed always</span>
+    <span>Not affiliated with any client, brand, or business</span>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
