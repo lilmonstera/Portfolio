@@ -14,7 +14,7 @@
 <body class="font-body-md text-body-md selection:bg-electric-cyan selection:text-obsidian-base">
   <!-- TopNavBar -->
   <nav class="fixed top-0 w-full z-50 bg-obsidian-base/80 backdrop-blur-xl border-b border-white/10">
-    <div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+    <div class="flex justify-between items-center h-16 md:h-20 px-4 md:px-12 max-w-container-max mx-auto">
       <div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">Nucleus.io</div>
       <div class="hidden md:flex items-center gap-8 font-label-md text-label-md">
         <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Solutions</a>
@@ -23,69 +23,91 @@
         <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Resources</a>
         <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">About</a>
       </div>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-3">
         <button class="hidden lg:block text-on-surface-variant font-label-md px-4 py-2 hover:bg-white/5 transition-all">Contact Sales</button>
-        <button class="bg-electric-cyan text-obsidian-base font-label-md px-6 py-2 rounded-lg font-bold glow-cyan transition-transform hover:scale-105">Secure Portal</button>
+        <button class="hidden sm:block bg-electric-cyan text-obsidian-base font-label-md px-5 py-2 rounded-lg font-bold glow-cyan transition-transform hover:scale-105">Secure Portal</button>
+        <!-- Hamburger -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded hover:bg-white/5 transition-all" aria-label="Toggle menu">
+          <span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
+          <span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
+          <span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden bg-obsidian-base/95 backdrop-blur-xl border-t border-white/10 overflow-hidden max-h-0 transition-all duration-300">
+      <div class="flex flex-col px-4 py-4 gap-1 font-label-md text-label-md">
+        <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="#">Solutions</a>
+        <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="#">Capabilities</a>
+        <a class="text-electric-cyan py-3 border-b border-white/5" href="#">Intelligence</a>
+        <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="#">Resources</a>
+        <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="#">About</a>
+        <div class="flex gap-3 pt-4">
+          <button class="flex-1 text-on-surface-variant font-label-md px-4 py-2.5 border border-white/10 rounded-lg hover:bg-white/5 transition-all">Contact Sales</button>
+          <button class="flex-1 bg-electric-cyan text-obsidian-base font-label-md px-4 py-2.5 rounded-lg font-bold glow-cyan">Secure Portal</button>
+        </div>
       </div>
     </div>
   </nav>
-  <main class="pt-20">
+
+  <main class="pt-16 md:pt-20">
     <!-- Hero Section -->
-    <section class="relative min-h-[819px] flex items-center justify-center overflow-hidden px-margin-mobile md:px-margin-desktop">
-      <div class="relative z-10 max-w-4xl text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-electric-cyan/30 bg-electric-cyan/5 mb-8">
+    <section class="relative min-h-[90vh] md:min-h-[819px] flex items-center justify-center overflow-hidden px-4 md:px-margin-desktop">
+      <div class="relative z-10 max-w-4xl text-center w-full">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-electric-cyan/30 bg-electric-cyan/5 mb-6 md:mb-8">
           <span class="flex h-2 w-2 rounded-full bg-electric-cyan animate-pulse"></span>
           <span class="font-label-sm text-label-sm uppercase tracking-widest text-electric-cyan">Enterprise AI 2024</span>
         </div>
-        <h1 class="font-headline-xl text-headline-xl mb-6 leading-none">Intelligent Automation &amp; <span class="text-electric-cyan">Predictive Analytics.</span></h1>
-        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">Deploying proprietary neural architectures that anticipate market shifts before they manifest. Nucleus.io transforms raw telemetry into executive-level foresight.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <button class="bg-electric-cyan text-obsidian-base px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-all hover:brightness-110">
+        <h1 class="hero-headline font-bold leading-tight mb-5 md:mb-6">Intelligent Automation &amp; <span class="text-electric-cyan">Predictive Analytics.</span></h1>
+        <p class="text-base md:text-body-lg text-on-surface-variant mb-8 md:mb-10 max-w-2xl mx-auto px-2">Deploying proprietary neural architectures that anticipate market shifts before they manifest. Nucleus.io transforms raw telemetry into executive-level foresight.</p>
+        <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4 sm:px-0">
+          <button class="bg-electric-cyan text-obsidian-base px-6 md:px-8 py-3.5 md:py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-all hover:brightness-110">
             Explore Deployment Models
             <span class="material-symbols-outlined">arrow_forward</span>
           </button>
-          <button class="border border-white/20 text-on-surface px-8 py-4 rounded-lg font-bold hover:bg-white/5 transition-all">View Patent Portfolio</button>
+          <button class="border border-white/20 text-on-surface px-6 md:px-8 py-3.5 md:py-4 rounded-lg font-bold hover:bg-white/5 transition-all">View Patent Portfolio</button>
         </div>
       </div>
     </section>
+
     <!-- AI Strategy Bento Grid -->
-    <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-      <div class="mb-16">
-        <h2 class="font-headline-lg text-headline-lg mb-4">AI Strategy</h2>
+    <section class="py-12 md:py-24 px-4 md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="mb-10 md:mb-16">
+        <h2 class="section-headline font-semibold mb-4">AI Strategy</h2>
         <div class="neural-line mb-8"></div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-gutter">
         <!-- Large Feature -->
-        <div class="md:col-span-8 glass-card border border-white/10 rounded-xl p-8 relative overflow-hidden group">
+        <div class="md:col-span-8 glass-card border border-white/10 rounded-xl p-6 md:p-8 relative overflow-hidden group">
           <div class="relative z-10 h-full flex flex-col justify-between">
             <div>
               <span class="font-label-md text-electric-cyan mb-4 block">01 / DEPLOYMENT</span>
-              <h3 class="font-headline-md text-headline-md mb-4">Neural Infrastructure Orchestration</h3>
-              <p class="text-on-surface-variant max-w-md">Our AI deployment framework operates on a zero-trust architecture, ensuring that neural processing remains isolated and cryptographically secure.</p>
+              <h3 class="card-headline font-semibold mb-4">Neural Infrastructure Orchestration</h3>
+              <p class="text-on-surface-variant max-w-md text-sm md:text-base">Our AI deployment framework operates on a zero-trust architecture, ensuring that neural processing remains isolated and cryptographically secure.</p>
             </div>
-            <div class="mt-12 flex gap-4 overflow-x-auto pb-4">
-              <div class="bg-surface-navy/50 border border-white/5 p-4 rounded min-w-[200px]">
+            <div class="mt-8 md:mt-12 flex gap-4 overflow-x-auto pb-4">
+              <div class="bg-surface-navy/50 border border-white/5 p-4 rounded min-w-[160px] md:min-w-[200px]">
                 <span class="material-symbols-outlined text-electric-cyan mb-2">hub</span>
-                <div class="font-label-sm mb-1">Edge Nodes</div>
-                <div class="text-2xl font-bold">4.2M+</div>
+                <div class="font-label-sm mb-1 text-xs md:text-sm">Edge Nodes</div>
+                <div class="text-xl md:text-2xl font-bold">4.2M+</div>
               </div>
-              <div class="bg-surface-navy/50 border border-white/5 p-4 rounded min-w-[200px]">
-                <span class="material-symbols-outlined text-matrix-emerald mb-2">bolt</span>
-                <div class="font-label-sm mb-1">Inference Speed</div>
-                <div class="text-2xl font-bold">&lt;14ms</div>
+              <div class="bg-surface-navy/50 border border-white/5 p-4 rounded min-w-[160px] md:min-w-[200px]">
+                <span class="material-symbols-outlined text-electric-cyan mb-2">bolt</span>
+                <div class="font-label-sm mb-1 text-xs md:text-sm">Inference Speed</div>
+                <div class="text-xl md:text-2xl font-bold">&lt;14ms</div>
               </div>
             </div>
           </div>
           <div class="absolute right-[-10%] top-[-10%] w-1/2 h-full opacity-20 group-hover:opacity-40 transition-opacity"></div>
         </div>
         <!-- Small Feature -->
-        <div class="md:col-span-4 bg-surface-navy border border-white/10 rounded-xl p-8 flex flex-col justify-between">
+        <div class="md:col-span-4 bg-surface-navy border border-white/10 rounded-xl p-6 md:p-8 flex flex-col justify-between">
           <div>
-            <span class="font-label-md text-secondary mb-4 block">02 / PATENTS</span>
-            <h3 class="font-headline-md text-headline-md mb-4">Proprietary IP</h3>
+            <span class="font-label-md text-electric-cyan mb-4 block">02 / PATENTS</span>
+            <h3 class="card-headline font-semibold mb-4">Proprietary IP</h3>
           </div>
-          <p class="text-on-surface-variant">Holding 142 patents in reinforcement learning and temporal data serialization for autonomous decision engines.</p>
-          <div class="mt-8 pt-8 border-t border-white/5">
+          <p class="text-on-surface-variant text-sm md:text-base">Holding 142 patents in reinforcement learning and temporal data serialization for autonomous decision engines.</p>
+          <div class="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/5">
             <a class="text-electric-cyan flex items-center gap-2 font-label-md hover:underline" href="#">
               Research Repository
               <span class="material-symbols-outlined text-sm">open_in_new</span>
@@ -93,38 +115,39 @@
           </div>
         </div>
         <!-- Impact Cards -->
-        <div class="md:col-span-4 glass-card border border-white/10 rounded-xl p-8">
-          <div class="h-12 w-12 rounded bg-primary/10 flex items-center justify-center mb-6">
+        <div class="md:col-span-4 glass-card border border-white/10 rounded-xl p-6 md:p-8">
+          <div class="h-12 w-12 rounded bg-primary/10 flex items-center justify-center mb-4 md:mb-6">
             <span class="material-symbols-outlined text-electric-cyan">account_balance</span>
           </div>
-          <h4 class="font-headline-md text-headline-md mb-3">Finance</h4>
-          <p class="text-on-surface-variant mb-6 text-sm">Automating high-frequency risk assessment and liquidity forecasting for Tier-1 institutions.</p>
-          <div class="text-matrix-emerald font-label-md">+22% Efficiency</div>
+          <h4 class="card-headline font-semibold mb-3">Finance</h4>
+          <p class="text-on-surface-variant mb-4 md:mb-6 text-sm">Automating high-frequency risk assessment and liquidity forecasting for Tier-1 institutions.</p>
+          <div class="text-electric-cyan font-label-md">+22% Efficiency</div>
         </div>
-        <div class="md:col-span-4 glass-card border border-white/10 rounded-xl p-8">
-          <div class="h-12 w-12 rounded bg-cyber-violet/10 flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-cyber-violet">monitor_heart</span>
+        <div class="md:col-span-4 glass-card border border-white/10 rounded-xl p-6 md:p-8">
+          <div class="h-12 w-12 rounded bg-electric-cyan/10 flex items-center justify-center mb-4 md:mb-6">
+            <span class="material-symbols-outlined text-electric-cyan">monitor_heart</span>
           </div>
-          <h4 class="font-headline-md text-headline-md mb-3">Healthcare</h4>
-          <p class="text-on-surface-variant mb-6 text-sm">Predictive diagnostic models that reduce false-positives in high-resolution medical imaging.</p>
-          <div class="text-matrix-emerald font-label-md">99.4% Accuracy</div>
+          <h4 class="card-headline font-semibold mb-3">Healthcare</h4>
+          <p class="text-on-surface-variant mb-4 md:mb-6 text-sm">Predictive diagnostic models that reduce false-positives in high-resolution medical imaging.</p>
+          <div class="text-electric-cyan font-label-md">99.4% Accuracy</div>
         </div>
-        <div class="md:col-span-4 glass-card border border-white/10 rounded-xl p-8">
-          <div class="h-12 w-12 rounded bg-matrix-emerald/10 flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-matrix-emerald">memory</span>
+        <div class="md:col-span-4 glass-card border border-white/10 rounded-xl p-6 md:p-8">
+          <div class="h-12 w-12 rounded bg-electric-cyan/10 flex items-center justify-center mb-4 md:mb-6">
+            <span class="material-symbols-outlined text-electric-cyan">memory</span>
           </div>
-          <h4 class="font-headline-md text-headline-md mb-3">Technology</h4>
-          <p class="text-on-surface-variant mb-6 text-sm">Self-healing infrastructure loops for hyperscale cloud environments and IoT ecosystems.</p>
-          <div class="text-matrix-emerald font-label-md">-60% Downtime</div>
+          <h4 class="card-headline font-semibold mb-3">Technology</h4>
+          <p class="text-on-surface-variant mb-4 md:mb-6 text-sm">Self-healing infrastructure loops for hyperscale cloud environments and IoT ecosystems.</p>
+          <div class="text-electric-cyan font-label-md">-60% Downtime</div>
         </div>
       </div>
     </section>
+
     <!-- Predictive Insights Visual Section -->
-    <section class="py-24 bg-surface-container-lowest overflow-hidden">
-      <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section class="py-12 md:py-24 bg-surface-container-lowest overflow-hidden">
+      <div class="px-4 md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
         <div>
-          <h2 class="font-headline-lg text-headline-lg mb-6">Predictive Insights: <br/><span class="text-electric-cyan">The Future in Real-Time</span></h2>
-          <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Our platform doesn't just process data; it visualizes the delta between current state and potential futures. Use our technical workbench to manipulate variables and witness immediate projections.</p>
+          <h2 class="section-headline font-semibold mb-5 md:mb-6">Predictive Insights: <br/><span class="text-electric-cyan">The Future in Real-Time</span></h2>
+          <p class="text-base md:text-body-lg text-on-surface-variant mb-6 md:mb-8">Our platform doesn't just process data; it visualizes the delta between current state and potential futures. Use our technical workbench to manipulate variables and witness immediate projections.</p>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-electric-cyan mt-1">check_circle</span>
@@ -142,26 +165,26 @@
             </li>
           </ul>
         </div>
-        <div class="relative h-[500px] rounded-2xl border border-white/10 bg-obsidian-base overflow-hidden shadow-2xl">
+        <div class="relative h-64 sm:h-80 lg:h-[500px] rounded-2xl border border-white/10 bg-obsidian-base overflow-hidden shadow-2xl">
           <div class="absolute inset-0 z-0"></div>
           <!-- UI Overlay Mockup -->
-          <div class="absolute inset-0 z-10 p-6 flex flex-col justify-between pointer-events-none">
-            <div class="flex justify-between">
-              <div class="bg-black/60 backdrop-blur-md px-4 py-2 rounded border border-white/10">
+          <div class="absolute inset-0 z-10 p-4 md:p-6 flex flex-col justify-between pointer-events-none">
+            <div class="flex justify-between gap-2">
+              <div class="bg-black/60 backdrop-blur-md px-3 py-2 rounded border border-white/10">
                 <span class="font-label-sm text-xs opacity-60 block">STREAMING TELEMETRY</span>
-                <span class="font-label-md text-matrix-emerald">ACTIVE_NODE_07</span>
+                <span class="font-label-md text-electric-cyan text-xs md:text-sm">ACTIVE_NODE_07</span>
               </div>
-              <div class="bg-black/60 backdrop-blur-md px-4 py-2 rounded border border-white/10">
+              <div class="bg-black/60 backdrop-blur-md px-3 py-2 rounded border border-white/10">
                 <span class="font-label-sm text-xs opacity-60 block">PROBABILITY MAP</span>
-                <span class="font-label-md text-electric-cyan">0.892 P_VAL</span>
+                <span class="font-label-md text-electric-cyan text-xs md:text-sm">0.892 P_VAL</span>
               </div>
             </div>
-            <div class="bg-black/60 backdrop-blur-md p-4 rounded border border-white/10">
+            <div class="bg-black/60 backdrop-blur-md p-3 md:p-4 rounded border border-white/10">
               <div class="flex justify-between items-end mb-2">
                 <div class="font-label-sm text-xs">THREAT_INTEL_INDEX</div>
                 <div class="text-xs text-on-surface-variant">UTC 14:02:11</div>
               </div>
-              <div class="h-8 flex items-end gap-1">
+              <div class="h-6 md:h-8 flex items-end gap-1">
                 <div class="w-full bg-electric-cyan/20 h-4 rounded-t-sm"></div>
                 <div class="w-full bg-electric-cyan/40 h-6 rounded-t-sm"></div>
                 <div class="w-full bg-electric-cyan/60 h-3 rounded-t-sm"></div>
@@ -173,65 +196,68 @@
         </div>
       </div>
     </section>
+
     <!-- Case Study Teaser -->
-    <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+    <section class="py-12 md:py-24 px-4 md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 gap-4">
         <div>
-          <h2 class="font-headline-lg text-headline-lg">Industry Impact</h2>
-          <p class="text-on-surface-variant">Validated results across the Fortune 500.</p>
+          <h2 class="section-headline font-semibold">Industry Impact</h2>
+          <p class="text-on-surface-variant mt-1">Validated results across the Fortune 500.</p>
         </div>
-        <button class="text-electric-cyan font-label-md border border-electric-cyan px-6 py-2 rounded hover:bg-electric-cyan/10 transition-all">Download Annual Report</button>
+        <button class="self-start sm:self-auto text-electric-cyan font-label-md border border-electric-cyan px-6 py-2 rounded hover:bg-electric-cyan/10 transition-all whitespace-nowrap">Download Annual Report</button>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-gutter">
         <div class="relative group cursor-pointer">
-          <div class="aspect-video rounded-xl overflow-hidden mb-6 grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="High-tech minimalist server farm with glowing electric cyan led strips and glass surfaces. Professional industrial photography style, dark cinematic lighting with moody obsidian tones and sharp architectural lines. The image should convey scale, security, and cutting-edge artificial intelligence infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6Td-OFE-DXbYN85Jy46WPFmR2YiPug_NOkuMBP4BbJdrGnHkDa4Lav7gRlbwfbUot6aIUAC9l6Yp5gnYxsiYbglqDz2DgUCj_NpDVCGPfNbnFZHXygdLqIaxYjRuqCdkaQQpuho3dAPOCa-pI3GcvaPx40qpjsf70i1BgbIZbz2gkHSGv-iA2IsK2njwMLGS1s4kc97IbqFuTaIRUe_cPd3Egr5dTO9ePXQ9HjgdrsGDabIeOeqxK"/>
+          <div class="aspect-video rounded-xl overflow-hidden mb-0 grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6Td-OFE-DXbYN85Jy46WPFmR2YiPug_NOkuMBP4BbJdrGnHkDa4Lav7gRlbwfbUot6aIUAC9l6Yp5gnYxsiYbglqDz2DgUCj_NpDVCGPfNbnFZHXygdLqIaxYjRuqCdkaQQpuho3dAPOCa-pI3GcvaPx40qpjsf70i1BgbIZbz2gkHSGv-iA2IsK2njwMLGS1s4kc97IbqFuTaIRUe_cPd3Egr5dTO9ePXQ9HjgdrsGDabIeOeqxK" alt="High-tech server farm"/>
           </div>
-          <div class="absolute bottom-10 left-6 right-6 p-6 bg-obsidian-base/80 backdrop-blur-xl border-l-4 border-electric-cyan">
+          <div class="relative sm:absolute sm:bottom-6 left-0 sm:left-6 right-0 sm:right-6 p-5 md:p-6 bg-obsidian-base/90 sm:bg-obsidian-base/80 sm:backdrop-blur-xl border-l-4 border-electric-cyan mt-0 rounded-b-xl sm:rounded-none">
             <div class="font-label-sm text-electric-cyan mb-1">TECH CASE STUDY</div>
-            <h3 class="font-headline-md text-headline-md">Global Data Center Self-Optimization</h3>
+            <h3 class="card-headline font-semibold">Global Data Center Self-Optimization</h3>
             <p class="text-sm text-on-surface-variant mt-2">Reduction of cooling costs by 42% through autonomous thermal vectoring.</p>
           </div>
         </div>
         <div class="relative group cursor-pointer">
-          <div class="aspect-video rounded-xl overflow-hidden mb-6 grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Abstract neural network visualization with glowing nodes and thin connecting filaments in electric cyan and deep violet. Dark background with subtle depth-of-field effects and floating data particles. The visual style is technical, clean, and futuristic, representing complex predictive analytics and artificial intelligence architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoPMOgEJxUNZ-xfcS6LUMb45r0UBLZObt9BdVyaN7PbUqLV9NZEYs3l5xsn6T3E2IxoTAKOz-SRWywG8PtdTDkeKMbQntpvtPy4_CrFpr7TkoDisoBpnWSl36D7U4Cd16qSUnrXc7SvmWn1WxaYzRD_Zqby9ym7ipI8H6ZcIxpr6DYoMZ70uB6yu2eNmuBGVqs_ZfdrFsnB-GV6uBhxosn2aT3yohth-yoXCwiM6Pwi49NtwS6SmEm"/>
+          <div class="aspect-video rounded-xl overflow-hidden mb-0 grayscale group-hover:grayscale-0 transition-all duration-500 border border-white/10">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoPMOgEJxUNZ-xfcS6LUMb45r0UBLZObt9BdVyaN7PbUqLV9NZEYs3l5xsn6T3E2IxoTAKOz-SRWywG8PtdTDkeKMbQntpvtPy4_CrFpr7TkoDisoBpnWSl36D7U4Cd16qSUnrXc7SvmWn1WxaYzRD_Zqby9ym7ipI8H6ZcIxpr6DYoMZ70uB6yu2eNmuBGVqs_ZfdrFsnB-GV6uBhxosn2aT3yohth-yoXCwiM6Pwi49NtwS6SmEm" alt="Neural network visualization"/>
           </div>
-          <div class="absolute bottom-10 left-6 right-6 p-6 bg-obsidian-base/80 backdrop-blur-xl border-l-4 border-cyber-violet">
-            <div class="font-label-sm text-cyber-violet mb-1">FINANCE CASE STUDY</div>
-            <h3 class="font-headline-md text-headline-md">Multi-Dimensional Fraud Detection</h3>
+          <div class="relative sm:absolute sm:bottom-6 left-0 sm:left-6 right-0 sm:right-6 p-5 md:p-6 bg-obsidian-base/90 sm:bg-obsidian-base/80 sm:backdrop-blur-xl border-l-4 border-electric-cyan mt-0 rounded-b-xl sm:rounded-none">
+            <div class="font-label-sm text-electric-cyan mb-1">FINANCE CASE STUDY</div>
+            <h3 class="card-headline font-semibold">Multi-Dimensional Fraud Detection</h3>
             <p class="text-sm text-on-surface-variant mt-2">Zero-day threat identification system processing 2M transactions per second.</p>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Let's Build CTA -->
-    <section class="py-32 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+    <section class="py-16 md:py-32 px-4 md:px-margin-desktop relative overflow-hidden">
       <div class="absolute inset-0 bg-surface-navy pointer-events-none opacity-50"></div>
       <div class="absolute inset-0 opacity-20 pointer-events-none"></div>
-      <div class="relative z-10 max-w-4xl mx-auto text-center glass-card p-12 md:p-20 border border-white/10 rounded-2xl">
-        <h2 class="font-headline-xl text-headline-xl mb-6">Let's Build the <span class="text-electric-cyan">Autonomous Future.</span></h2>
-        <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Connect with our systems architects to define your neural transformation roadmap.</p>
+      <div class="relative z-10 max-w-4xl mx-auto text-center glass-card p-8 sm:p-12 md:p-20 border border-white/10 rounded-2xl">
+        <h2 class="section-headline font-bold mb-5 md:mb-6">Let's Build the <span class="text-electric-cyan">Autonomous Future.</span></h2>
+        <p class="text-base md:text-body-lg text-on-surface-variant mb-8 md:mb-12">Connect with our systems architects to define your neural transformation roadmap.</p>
         <form class="max-w-md mx-auto flex flex-col gap-4">
           <div class="relative">
-            <input class="w-full bg-obsidian-base border border-white/10 rounded-lg px-6 py-4 focus:outline-none focus:border-electric-cyan transition-colors text-on-surface" placeholder="Corporate Email" type="email"/>
+            <input class="w-full bg-obsidian-base border border-white/10 rounded-lg px-5 md:px-6 py-3.5 md:py-4 focus:outline-none focus:border-electric-cyan transition-colors text-on-surface" placeholder="Corporate Email" type="email"/>
           </div>
-          <button class="bg-electric-cyan text-obsidian-base font-bold px-10 py-4 rounded-lg hover:brightness-110 glow-cyan transition-all">Request Architecture Session</button>
-          <p class="text-xs text-on-surface-variant mt-4">By submitting, you agree to our Neural Privacy Compliance Standards.</p>
+          <button class="bg-electric-cyan text-obsidian-base font-bold px-8 md:px-10 py-3.5 md:py-4 rounded-lg hover:brightness-110 glow-cyan transition-all">Request Architecture Session</button>
+          <p class="text-xs text-on-surface-variant mt-2 md:mt-4">By submitting, you agree to our Neural Privacy Compliance Standards.</p>
         </form>
       </div>
     </section>
   </main>
+
   <!-- Footer -->
-  <footer class="bg-obsidian-base border-t border-white/5 py-20">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
-      <div class="md:col-span-1">
-        <div class="font-headline-md text-headline-md font-bold text-on-surface mb-6">Nucleus.io</div>
-        <p class="text-on-surface-variant text-sm pr-8">Pioneering the architecture of tomorrow's intelligence. Secure. Scalable. Sovereign.</p>
+  <footer class="bg-obsidian-base border-t border-white/5 py-12 md:py-20">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-gutter px-4 md:px-12 max-w-container-max mx-auto">
+      <div class="col-span-2 md:col-span-1">
+        <div class="font-headline-md text-headline-md font-bold text-on-surface mb-4 md:mb-6">Nucleus.io</div>
+        <p class="text-on-surface-variant text-sm md:pr-8">Pioneering the architecture of tomorrow's intelligence. Secure. Scalable. Sovereign.</p>
       </div>
       <div>
-        <h5 class="font-label-md text-electric-cyan mb-6">Ecosystem</h5>
-        <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Ecosystem</h5>
+        <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
           <li><a class="hover:text-electric-cyan transition-colors" href="#">Threat Intelligence</a></li>
           <li><a class="hover:text-electric-cyan transition-colors" href="#">IoT Ecosystems</a></li>
           <li><a class="hover:text-electric-cyan transition-colors" href="#">AI Research</a></li>
@@ -239,16 +265,16 @@
         </ul>
       </div>
       <div>
-        <h5 class="font-label-md text-electric-cyan mb-6">Governance</h5>
-        <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Governance</h5>
+        <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
           <li><a class="hover:text-electric-cyan transition-colors" href="#">Case Studies</a></li>
           <li><a class="hover:text-electric-cyan transition-colors" href="#">Privacy Policy</a></li>
           <li><a class="hover:text-electric-cyan transition-colors" href="#">Compliance</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="font-label-md text-electric-cyan mb-6">Connect</h5>
-        <div class="flex gap-4 mb-6">
+        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Connect</h5>
+        <div class="flex gap-4 mb-4 md:mb-6">
           <a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#">
             <span class="material-symbols-outlined text-sm">terminal</span>
           </a>
@@ -259,13 +285,13 @@
         <div class="p-4 rounded bg-surface-navy border border-white/5">
           <div class="text-xs text-on-surface-variant mb-1">SYSTEM_STATUS</div>
           <div class="flex items-center gap-2">
-            <div class="h-2 w-2 rounded-full bg-matrix-emerald"></div>
+            <div class="h-2 w-2 rounded-full bg-electric-cyan"></div>
             <span class="text-sm font-label-md">ALL_SYSTEMS_OPTIMAL</span>
           </div>
         </div>
       </div>
     </div>
-    <div class="mt-20 pt-8 border-t border-white/5 px-margin-desktop max-w-container-max mx-auto text-center text-on-surface-variant text-xs font-label-sm">
+    <div class="mt-12 md:mt-20 pt-8 border-t border-white/5 px-4 md:px-12 max-w-container-max mx-auto text-center text-on-surface-variant text-xs font-label-sm">
       © 2024 Nucleus.io. Neural Security Systems. All rights reserved.
     </div>
   </footer>
