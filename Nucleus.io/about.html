@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nucleus.io | IoT Platforms &amp; Edge Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#dbfcff",
+                    "tertiary-container": "#71717a",
+                    "on-tertiary-fixed": "#18181b",
+                    "electric-cyan": "#00F0FF",
+                    "primary-fixed-dim": "#00dbe9",
+                    "surface-navy": "#111827",
+                    "on-surface-variant": "#b9cacb",
+                    "tertiary-fixed-dim": "#a1a1aa",
+                    "obsidian-base": "#050608",
+                    "on-surface": "#e2e2e8",
+                    "primary-container": "#00f0ff",
+                    "primary-fixed": "#7df4ff",
+                    "on-primary-fixed": "#002022",
+                    "background": "#111318",
+                    "on-tertiary-container": "#d4d4d8",
+                    "outline": "#849495",
+                    "surface": "#111318",
+                    "surface-dim": "#111318",
+                    "error": "#ffb4ab",
+                    "on-error": "#690005",
+                    "surface-tint": "#00dbe9",
+                    "surface-bright": "#37393e",
+                    "security-gray": "#9CA3AF",
+                    "surface-container-highest": "#333539",
+                    "surface-container-lowest": "#0c0e12",
+                    "tertiary": "#71717a",
+                    "slate-grey": "#71717a",
+                    "inverse-primary": "#006970",
+                    "on-error-container": "#ffdad6",
+                    "on-primary": "#00363a",
+                    "on-tertiary-fixed-variant": "#3f3f46",
+                    "tertiary-fixed": "#e4e4e7",
+                    "on-primary-container": "#006970",
+                    "surface-variant": "#333539",
+                    "inverse-surface": "#e2e2e8",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#2f3035",
+                    "outline-variant": "#3b494b",
+                    "surface-container-high": "#282a2e",
+                    "on-primary-fixed-variant": "#004f54",
+                    "surface-container": "#1e2024",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#e2e2e8",
+                    "surface-container-low": "#1a1c20"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "container-max": "1440px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Sora"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-lg": ["Sora"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Sora"],
+                    "headline-xl": ["Sora"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-cyan {
+            filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.3));
+        }
+        body {
+            background-color: #050608;
+            color: #e2e2e8;
+            overflow-x: hidden;
+        }
+        .mobile-menu {
+            transition: max-height 0.3s ease;
+        }
+        .mobile-menu.open {
+            max-height: 400px;
+        }
+        .mobile-menu-btn-open .hamburger-line:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .mobile-menu-btn-open .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        .mobile-menu-btn-open .hamburger-line:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-obsidian-base/80 backdrop-blur-xl border-b border-white/10 transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center h-16 md:h-20 px-4 md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface hover:text-electric-cyan transition-colors" href="index.html">Nucleus.io</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Solutions</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Capabilities</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Intelligence</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Resources</a>
+<a class="font-label-md text-label-md text-electric-cyan border-b-2 border-electric-cyan pb-1 transition-colors duration-300" href="#">About</a>
+</div>
+<div class="flex items-center gap-3">
+<button class="hidden lg:block px-6 py-2 rounded-lg font-label-md text-label-md border border-electric-cyan text-electric-cyan hover:bg-electric-cyan/10 transition-all">Contact Sales</button>
+<button class="hidden sm:block px-6 py-2 rounded-lg font-label-md text-label-md bg-electric-cyan text-obsidian-base font-bold shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:scale-105 transition-all">Secure Portal</button>
+<button aria-expanded="false" aria-label="Toggle menu" class="md:hidden flex flex-col gap-1.5 p-2 rounded hover:bg-white/5 transition-all" id="mobile-menu-btn">
+<span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
+<span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
+<span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu md:hidden bg-obsidian-base/95 backdrop-blur-xl overflow-hidden max-h-0 transition-all duration-300" id="mobile-menu">
+<div class="flex flex-col px-4 py-4 gap-1 font-label-md text-label-md">
+<a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="#">Solutions</a>
+<a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="#">Capabilities</a>
+<a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="#">Intelligence</a>
+<a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="#">Resources</a>
+<a class="text-electric-cyan py-3 border-b border-white/5" href="#">About</a>
+<div class="flex gap-3 pt-4">
+<button class="flex-1 text-on-surface-variant font-label-md px-4 py-2.5 border border-white/10 rounded-lg hover:bg-white/5 transition-all">Contact Sales</button>
+<button class="flex-1 bg-electric-cyan text-obsidian-base font-label-md px-4 py-2.5 rounded-lg font-bold glow-cyan">Secure Portal</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-16 md:pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center px-margin-desktop overflow-hidden">
+<div class="absolute inset-0 z-0">
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric-cyan/10 border border-electric-cyan/20 text-electric-cyan font-label-sm text-label-sm uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+                    Next-Gen IoT Ecosystem
+                </div>
+<h1 class="font-headline-xl text-headline-xl tracking-tight leading-none text-white">
+                    Seamlessly Connecting <span class="text-electric-cyan">People</span>, <span class="text-slate-grey">Processes</span>, and <span class="text-white">Systems</span>.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Nucleus.io orchestrates the global flow of intelligence. We provide the unified neural fabric for smart infrastructure, industrial automation, and edge-first connectivity.
+                </p>
+<div class="flex justify-center gap-6 pt-4">
+<button class="px-8 py-4 rounded-lg bg-electric-cyan text-obsidian-base font-bold font-label-md text-label-md flex items-center gap-2 glow-cyan hover:translate-y-[-2px] transition-all">
+                        Deploy Edge Node <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-4 rounded-lg border border-white/20 text-white font-label-md text-label-md hover:bg-white/5 transition-all">
+                        Technical Specs
+                    </button>
+</div>
+</div>
+</section>
+<!-- Company Overview / Our DNA Section -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="mb-16">
+<div class="inline-block px-3 py-1 mb-4 rounded bg-electric-cyan/10 border border-electric-cyan/20 text-electric-cyan font-label-sm text-label-sm uppercase tracking-widest">
+                Our Identity
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-white">Our DNA</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Item 1 -->
+<div class="p-8 border border-white/10 hover:border-electric-cyan/50 transition-colors group">
+<div class="text-electric-cyan font-label-md text-label-md uppercase tracking-tighter mb-4 group-hover:translate-x-1 transition-transform">01 / Overview</div>
+<h4 class="font-headline-md text-headline-md text-white mb-4 text-[20px]">Nucleus.io Tech Company Overview</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Delivers innovative technology solutions focused on real-world execution and impact. Operates at the intersection of innovation and practical implementation.</p>
+</div>
+<!-- Item 2 -->
+<div class="p-8 border border-white/10 hover:border-electric-cyan/50 transition-colors group">
+<div class="text-electric-cyan font-label-md text-label-md uppercase tracking-tighter mb-4 group-hover:translate-x-1 transition-transform">02 / Capabilities</div>
+<h4 class="font-headline-md text-headline-md text-white mb-4 text-[20px]">Core Capabilities</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Specializes in Artificial Intelligence (AI), Cybersecurity solutions, and Internet of Things (IoT) platforms. Deploys and integrates advanced technologies across multiple industries.</p>
+</div>
+<!-- Item 3 -->
+<div class="p-8 border border-white/10 hover:border-electric-cyan/50 transition-colors group">
+<div class="text-electric-cyan font-label-md text-label-md uppercase tracking-tighter mb-4 group-hover:translate-x-1 transition-transform">03 / Mission</div>
+<h4 class="font-headline-md text-headline-md text-white mb-4 text-[20px]">Mission &amp; Value Proposition</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Aims to enhance Efficiency, Security, Intelligence, and Business growth. Helps organizations fully leverage emerging technologies.</p>
+</div>
+<!-- Item 4 -->
+<div class="p-8 border border-white/10 hover:border-electric-cyan/50 transition-colors group">
+<div class="text-electric-cyan font-label-md text-label-md uppercase tracking-tighter mb-4 group-hover:translate-x-1 transition-transform">04 / Expertise</div>
+<h4 class="font-headline-md text-headline-md text-white mb-4 text-[20px]">Digital Transformation Expertise</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Designs solutions that connect People, Processes, and Systems. Enables Intelligent automation, Predictive analytics, and Secure, connected ecosystems. Focuses on building resilient, future-ready enterprises.</p>
+</div>
+<!-- Item 5 -->
+<div class="p-8 border border-white/10 hover:border-electric-cyan/50 transition-colors group">
+<div class="text-electric-cyan font-label-md text-label-md uppercase tracking-tighter mb-4 group-hover:translate-x-1 transition-transform">05 / Strategy</div>
+<h4 class="font-headline-md text-headline-md text-white mb-4 text-[20px]">Investment Strategy</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Maintains a strategic investment portfolio in Patent-holding entities, Intellectual property ventures, and Breakthrough technologies. Targets innovation-driven opportunities with long-term value potential.</p>
+</div>
+<!-- Item 6 -->
+<div class="p-8 border border-white/10 hover:border-electric-cyan/50 transition-colors group">
+<div class="text-electric-cyan font-label-md text-label-md uppercase tracking-tighter mb-4 group-hover:translate-x-1 transition-transform">06 / Approach</div>
+<h4 class="font-headline-md text-headline-md text-white mb-4 text-[20px]">Business Approach</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Combines Technology deployment, Intellectual property ownership, and Strategic investment. Builds a diverse and dynamic portfolio of offerings.</p>
+</div>
+</div>
+<div class="mt-12 p-8 bg-electric-cyan/5 border-l-4 border-electric-cyan">
+<h4 class="font-headline-md text-headline-md text-white mb-2 text-[20px]">Positioning &amp; Vision</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Positioned at the forefront of Technological advancement and Market transformation. Driven by innovation, vision, and commitment to excellence. Focused on creating lasting impact through technology.</p>
+</div>
+</div>
+</section>
+<!-- IoT Scalability Section: Vertical Features -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">Built for Hyper-Scale</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">From a single smart building to an entire nation's logistics network, Nucleus.io scales dynamically with your ambitions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center space-y-6">
+<div class="w-20 h-20 mx-auto bg-obsidian-base border border-white/10 rounded-full flex items-center justify-center shadow-lg hover:border-electric-cyan transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-electric-cyan" style="font-variation-settings: 'FILL' 1;">apartment</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Smart Cities</h3>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Intelligent traffic management, energy optimization, and public safety systems integrated into a single resilient core.</p>
+</div>
+<div class="text-center space-y-6">
+<div class="w-20 h-20 mx-auto bg-obsidian-base border border-white/10 rounded-full flex items-center justify-center shadow-lg hover:border-slate-grey transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-slate-grey" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Industrial 4.0</h3>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Revolutionizing factory floors with predictive maintenance and real-time robotic coordination for zero-downtime manufacturing.</p>
+</div>
+<div class="text-center space-y-6">
+<div class="w-20 h-20 mx-auto bg-obsidian-base border border-white/10 rounded-full flex items-center justify-center shadow-lg hover:border-white transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-white" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Smart Logistics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">Continuous supply chain visibility with autonomous fleet tracking and environmental monitoring across global routes.</p>
+</div>
+</div>
+</section>
+<!-- Solution Inquiry Section: Dark Form -->
+<section class="py-24 px-margin-desktop bg-obsidian-base">
+<div class="max-w-container-max mx-auto glass-card rounded-2xl overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/2 p-12 md:p-20 space-y-8 flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg text-white">Scale your IoT ambition today.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Our engineers are ready to architect your custom edge-to-cloud ecosystem. Secure, scalable, and built for the future.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-electric-cyan">check_circle</span>
+<span>Enterprise SLA Guarantees</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-electric-cyan">check_circle</span>
+<span>Dedicated Onboarding Architect</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-electric-cyan">check_circle</span>
+<span>Custom Protocol Support</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 bg-white/5 p-12 md:p-20">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Full Name</label>
+<input class="w-full bg-obsidian-base border-white/10 rounded-lg p-3 text-white focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-all outline-none" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Work Email</label>
+<input class="w-full bg-obsidian-base border-white/10 rounded-lg p-3 text-white focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-all outline-none" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Inquiry Type</label>
+<select class="w-full bg-obsidian-base border-white/10 rounded-lg p-3 text-white focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-all outline-none">
+<option>Edge Architecture Design</option>
+<option>Industrial IoT Integration</option>
+<option>Smart City Infrastructure</option>
+<option>Technical Partnership</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Tell us about your project</label>
+<textarea class="w-full bg-obsidian-base border-white/10 rounded-lg p-3 text-white focus:border-electric-cyan focus:ring-1 focus:ring-electric-cyan transition-all outline-none" rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-electric-cyan text-obsidian-base font-bold font-label-md text-label-md rounded-lg shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all" type="submit">
+                            Request Strategic Briefing
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Ownership Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto border-t border-white/5">
+<div class="max-w-3xl mb-16">
+<div class="inline-block px-3 py-1 mb-4 rounded bg-electric-cyan/10 border border-electric-cyan/20 text-electric-cyan font-label-sm text-label-sm uppercase tracking-widest">
+                Ownership Model
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">Built to own what it builds</h2>
+<p class="font-body-lg text-body-lg text-white mb-4">Nucleus isn't a systems integrator reselling someone else's technology.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Nucleus operates as one company with two connected strengths. The larger of the two is a technology deployment and advisory practice — the engine that put Nucleus infrastructure inside <span class="text-electric-cyan">Colgate's</span> global surveillance network, <span class="text-electric-cyan">Woolworths'</span> national footprint, <span class="text-electric-cyan">FIFA World Cup</span> stadia, and <span class="text-electric-cyan">Sasol's</span> critical operations. The second is a strategic investment and IP portfolio that reinforces the first: proof that Nucleus doesn't just implement, it invents.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="glass-card p-10 rounded-xl">
+<div class="w-12 h-12 rounded-lg bg-electric-cyan flex items-center justify-center text-obsidian-base mb-6">
+<span class="material-symbols-outlined text-3xl">workspace_premium</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Ownership, not just implementation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Nucleus holds proprietary technology it developed and owns outright — proof that the business builds intellectual property rather than simply integrating other providers' systems. That distinction shapes everything from how Nucleus is positioned to who it partners with.</p>
+</div>
+<div class="glass-card p-10 rounded-xl">
+<div class="w-12 h-12 rounded-lg bg-electric-cyan flex items-center justify-center text-obsidian-base mb-6">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-6">Who this is built for</h3>
+<div class="space-y-5">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-electric-cyan/30 flex items-center justify-center text-electric-cyan font-bold">1</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2"><span class="text-white font-bold">Enterprise buyers</span> across every industry who need security-critical technology deployed at scale.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-slate-grey/30 flex items-center justify-center text-slate-grey font-bold">2</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2"><span class="text-white font-bold">Investors and LPs</span> evaluating a credible, IP-backed portfolio.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-white/30 flex items-center justify-center text-white font-bold">3</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2"><span class="text-white font-bold">Patent holders</span> looking for a partner who can commercialise and scale, not just fund.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-electric-cyan/30 flex items-center justify-center text-electric-cyan font-bold">4</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2"><span class="text-white font-bold">Strategic partners</span> who recognise a serious co-operator when they see one.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-obsidian-base border-t border-white/5 py-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">Nucleus.io</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                    Leading the global shift towards intelligent, decentralized systems. Digital fortress for the IoT era.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:text-electric-cyan transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:text-electric-cyan transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</a>
+</div>
+</div>
+<div>
+<h6 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Solutions</h6>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-cyan transition-colors" href="#">Threat Intelligence</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-cyan transition-colors" href="#">IoT Ecosystems</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-cyan transition-colors" href="#">AI Research</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Company</h6>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-cyan transition-colors" href="#">Case Studies</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-cyan transition-colors" href="#">Cloud Fortress</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-cyan transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Compliance</h6>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-cyan transition-colors" href="#">Security Standards</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-electric-cyan transition-colors" href="#">Global Operations</a></li>
+<li class="font-body-md text-body-md text-on-surface-variant">© 2024 Nucleus.io. All rights reserved.</li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'bg-obsidian-base/95');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.remove('py-2', 'bg-obsidian-base/95');
+                nav.classList.add('h-20');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.toggle('open');
+                mobileMenuBtn.classList.toggle('mobile-menu-btn-open', isOpen);
+                mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+            });
+
+            // Close menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    mobileMenuBtn.classList.remove('mobile-menu-btn-open');
+                    mobileMenuBtn.setAttribute('aria-expanded', false);
+                });
+            });
+        }
+    </script>
+</body></html>
