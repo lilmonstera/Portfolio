@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Nucleus.io | Contact &amp; Technical Briefing</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap" rel="stylesheet"/>
+  <script id="tailwind-config" src="tailwind-config.js"></script>
+  <link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="font-body-md text-body-md selection:bg-electric-cyan selection:text-obsidian-base">
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 bg-obsidian-base/80 backdrop-blur-xl border-b border-white/10">
+    <div class="grid grid-cols-2 md:grid-cols-3 items-center h-16 md:h-20 px-4 md:px-12 max-w-container-max mx-auto">
+      <a class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface hover:text-electric-cyan transition-colors" href="index.html">Nucleus.io</a>
+      <div class="hidden md:flex items-center justify-center gap-8 font-label-md text-label-md">
+        <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="about.html">About</a>
+        <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="Investments%20&amp;%20IP.html">Investments &amp; IP</a>
+        <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="services.html">Services</a>
+      </div>
+      <div class="flex items-center justify-end gap-3">
+        <a class="hidden sm:inline-flex items-center bg-electric-cyan text-obsidian-base font-label-md px-5 py-2 rounded-lg font-bold glow-cyan transition-transform hover:scale-105" href="contact.html">Contact</a>
+        <!-- Hamburger -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded hover:bg-white/5 transition-all" aria-label="Toggle menu">
+          <span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
+          <span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
+          <span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden bg-obsidian-base/95 backdrop-blur-xl overflow-hidden max-h-0 transition-all duration-300">
+      <div class="flex flex-col px-4 py-4 gap-1 font-label-md text-label-md">
+        <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="about.html">About</a>
+        <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="Investments%20&amp;%20IP.html">Investments &amp; IP</a>
+        <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="services.html">Services</a>
+        <a class="mt-4 text-center bg-electric-cyan text-obsidian-base font-label-md px-4 py-2.5 rounded-lg font-bold glow-cyan" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-16 md:pt-20">
+    <!-- Hero Section -->
+    <section class="relative pt-10 pb-12 md:pt-16 md:pb-20 px-4 md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-gutter items-center">
+        <div class="lg:col-span-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-electric-cyan/30 bg-electric-cyan/5 mb-6 md:mb-8">
+            <span class="flex h-2 w-2 rounded-full bg-electric-cyan animate-pulse"></span>
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-electric-cyan">Secure Comm Channel Open</span>
+          </div>
+          <h1 class="hero-headline font-bold leading-tight mb-5 md:mb-6">Initiate Technical <span class="text-electric-cyan">Briefing.</span></h1>
+          <p class="text-base md:text-body-lg text-on-surface-variant max-w-2xl">Connect with our systems architects to map your technical requirements to a high-stakes deployment strategy. Precision execution starts with strategic alignment.</p>
+        </div>
+        <div class="lg:col-span-4 hidden lg:block">
+          <div class="relative aspect-square rounded-xl border border-white/10 bg-obsidian-base overflow-hidden shadow-2xl">
+            <div class="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAG2xotI3MkS5Z-0cf5gizOYTAQIdhmydocgVivk60OKjFmNGkSmiE_YoTQbt6tgeiTKwMHxRbinpjGWyVoChJos6bLJrZr0o6E7IYfRkH1rsYS9Op1-OFJXahARsgdxkL0FurLOxzuFXK-4xrcHl5zqZjuKgsYAm13baeSm8M_ZboRM39vKcamTt1Fwoht0FVxpIIWFzfv8Kf9nvUXdPXZEjGg3obeBqnHbTI4mNr8_RntHcQuH3Ws')"></div>
+            <div class="absolute inset-0 border border-electric-cyan/20 m-4"></div>
+            <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-3 py-2 rounded border border-white/10">
+              <span class="font-label-sm text-xs opacity-60 block">CHANNEL</span>
+              <span class="font-label-md text-electric-cyan text-xs">ENCRYPTED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form & Secondary CTA Bento -->
+    <section class="py-12 md:py-24 px-4 md:px-margin-desktop max-w-container-max mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-gutter">
+        <!-- Primary Form Panel -->
+        <div class="md:col-span-8 glass-card border border-white/10 rounded-xl p-6 md:p-8">
+          <h2 class="card-headline font-semibold mb-6 pb-4 border-b border-white/10">Technical Briefing Request</h2>
+          <form class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div class="flex flex-col gap-2">
+              <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Full Name</label>
+              <input class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors" placeholder="e.g. Dr. Aris Thorne" type="text"/>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Work Email</label>
+              <input class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors" placeholder="aris@organization.com" type="email"/>
+            </div>
+            <div class="flex flex-col gap-2 md:col-span-2">
+              <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Organization</label>
+              <input class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors" placeholder="Enter entity name" type="text"/>
+            </div>
+            <div class="flex flex-col gap-2 md:col-span-2">
+              <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Inquiry Type</label>
+              <div class="relative">
+                <select class="w-full appearance-none bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors">
+                  <option disabled selected value="">Select deployment domain</option>
+                  <option value="ai">AI Deployment Architecture</option>
+                  <option value="cyber">Cybersecurity Infrastructure</option>
+                  <option value="iot">IoT Systems Integration</option>
+                  <option value="other">Other Technical Inquiry</option>
+                </select>
+                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 md:col-span-2">
+              <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Project Overview</label>
+              <textarea class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors resize-none" placeholder="Outline primary objectives, current infrastructure challenges, and expected scale..." rows="4"></textarea>
+            </div>
+            <div class="md:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-2 pt-6 border-t border-white/10">
+              <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined text-base">lock</span>
+                <span class="font-label-sm text-label-sm uppercase">End-to-End Encrypted Transmission</span>
+              </div>
+              <button class="bg-electric-cyan text-obsidian-base font-bold px-8 py-3.5 rounded-lg flex items-center justify-center gap-2 glow-cyan transition-all hover:brightness-110" type="button">
+                Submit Request
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Secondary CTA & Info Stack -->
+        <div class="md:col-span-4 bg-surface-navy border border-white/10 rounded-xl p-6 md:p-8 flex flex-col justify-between group hover:border-electric-cyan/50 transition-colors">
+          <div>
+            <span class="font-label-md text-electric-cyan mb-4 block">RESOURCE</span>
+            <h3 class="card-headline font-semibold mb-4 group-hover:text-electric-cyan transition-colors">Download Capabilities</h3>
+            <p class="text-on-surface-variant text-sm md:text-base">Comprehensive overview of systems architecture and deployment specs.</p>
+          </div>
+          <div class="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/5 flex items-center justify-between">
+            <a class="text-electric-cyan flex items-center gap-2 font-label-md hover:underline" href="#">
+              Download PDF
+              <span class="material-symbols-outlined text-sm">download</span>
+            </a>
+            <span class="font-label-sm text-xs text-on-surface-variant uppercase">4.2MB</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Operations -->
+    <section class="py-12 md:py-24 px-4 md:px-margin-desktop max-w-container-max mx-auto border-t border-white/5">
+      <div class="mb-10 md:mb-16">
+        <h2 class="section-headline font-semibold mb-4">Where to Find Us</h2>
+        <div class="neural-line mb-8"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-gutter">
+        <!-- Location: Johannesburg -->
+        <div class="glass-card border border-white/10 rounded-xl p-6 md:p-8">
+          <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+            <h3 class="card-headline font-semibold">Johannesburg</h3>
+            <span class="font-label-sm text-xs bg-electric-cyan/10 text-electric-cyan px-2 py-1 rounded uppercase tracking-widest">HQ</span>
+          </div>
+          <address class="not-italic text-on-surface-variant text-sm leading-relaxed">
+            Nucleus Core Facility<br/>
+            Sandton Business District<br/>
+            Gauteng, 2196<br/>
+            South Africa
+          </address>
+          <div class="mt-4 font-label-md text-sm flex items-center gap-2 text-on-surface">
+            <span class="material-symbols-outlined text-electric-cyan text-base">phone_enabled</span>
+            +27 11 555 0199
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-obsidian-base border-t border-white/5 py-12 md:py-20">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-gutter px-4 md:px-12 max-w-container-max mx-auto">
+      <div class="col-span-2 md:col-span-1">
+        <div class="font-headline-md text-headline-md font-bold text-on-surface mb-4 md:mb-6">Nucleus.io</div>
+        <p class="text-on-surface-variant text-sm md:pr-8">Pioneering the architecture of tomorrow's intelligence. Secure. Scalable. Sovereign.</p>
+      </div>
+      <div>
+        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Legal &amp; Compliance</h5>
+        <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
+          <li><a class="hover:text-electric-cyan transition-colors" href="#">Legal</a></li>
+          <li><a class="hover:text-electric-cyan transition-colors" href="#">Compliance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Resources</h5>
+        <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
+          <li><a class="hover:text-electric-cyan transition-colors" href="#">Documentation</a></li>
+          <li><a class="hover:text-electric-cyan transition-colors" href="#">Security</a></li>
+          <li><a class="hover:text-electric-cyan transition-colors" href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Connect</h5>
+        <div class="flex gap-4 mb-4 md:mb-6">
+          <a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#">
+            <span class="material-symbols-outlined text-sm">terminal</span>
+          </a>
+          <a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#">
+            <span class="material-symbols-outlined text-sm">share</span>
+          </a>
+        </div>
+        <div class="p-4 rounded bg-surface-navy border border-white/5">
+          <div class="text-xs text-on-surface-variant mb-1">SYSTEM_STATUS</div>
+          <div class="flex items-center gap-2">
+            <div class="h-2 w-2 rounded-full bg-electric-cyan"></div>
+            <span class="text-sm font-label-md">ALL_SYSTEMS_OPTIMAL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 md:mt-20 pt-8 border-t border-white/5 px-4 md:px-12 max-w-container-max mx-auto text-center text-on-surface-variant text-xs font-label-sm">
+      © 2024 Nucleus.io. Neural Security Systems. All rights reserved.
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
