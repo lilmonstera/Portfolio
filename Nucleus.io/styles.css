@@ -4,19 +4,28 @@
 .glass-card {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
     backdrop-filter: blur(12px);
-}
-.glow-cyan {
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .neural-line {
     background: linear-gradient(90deg, transparent 0%, rgba(0, 240, 255, 0.4) 50%, transparent 100%);
     height: 1px;
     width: 100%;
 }
+.technical-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0);
+    background-size: 24px 24px;
+}
+.border-technical {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #050608;
     color: #e2e2e8;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Responsive typography */
@@ -61,5 +70,18 @@ body {
 @media (max-width: 380px) {
     .hero-headline {
         font-size: 1.75rem;
+    }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }

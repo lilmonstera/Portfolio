@@ -22,7 +22,7 @@
         <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="proof.html">Proof</a>
       </div>
       <div class="flex items-center justify-end gap-3">
-        <a class="hidden sm:inline-flex items-center bg-electric-cyan text-obsidian-base font-label-md px-5 py-2 rounded-lg font-bold glow-cyan transition-transform hover:scale-105" href="contact.html">Contact</a>
+        <a class="hidden sm:inline-flex items-center bg-electric-cyan text-obsidian-base font-label-md px-5 py-2 rounded-lg font-bold transition-transform hover:scale-105" href="contact.html">Contact</a>
         <!-- Hamburger -->
         <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded hover:bg-white/5 transition-all" aria-label="Toggle menu">
           <span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
@@ -37,7 +37,7 @@
         <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="about.html">About</a>
         <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="Investments%20&amp;%20IP.html">Investments &amp; IP</a>
         <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="proof.html">Proof</a>
-        <a class="mt-4 text-center bg-electric-cyan text-obsidian-base font-label-md px-4 py-2.5 rounded-lg font-bold glow-cyan" href="contact.html">Contact</a>
+        <a class="mt-4 text-center bg-electric-cyan text-obsidian-base font-label-md px-4 py-2.5 rounded-lg font-bold" href="contact.html">Contact</a>
       </div>
     </div>
   </nav>
@@ -73,27 +73,28 @@
         <!-- Primary Form Panel -->
         <div class="md:col-span-8 glass-card border border-white/10 rounded-xl p-6 md:p-8">
           <h2 class="card-headline font-semibold mb-6 pb-4 border-b border-white/10">Technical Briefing Request</h2>
-          <form class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <form id="contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div class="flex flex-col gap-2">
               <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Full Name</label>
-              <input class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors" placeholder="e.g. Dr. Aris Thorne" type="text"/>
+              <input id="contact-name" name="name" required class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors" placeholder="e.g. Dr. Aris Thorne" type="text"/>
             </div>
             <div class="flex flex-col gap-2">
               <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Work Email</label>
-              <input class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors" placeholder="aris@organization.com" type="email"/>
+              <input id="contact-email" name="email" required class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors" placeholder="aris@organization.com" type="email"/>
             </div>
             <div class="flex flex-col gap-2 md:col-span-2">
               <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Organization</label>
-              <input class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors" placeholder="Enter entity name" type="text"/>
+              <input id="contact-org" name="organization" class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors" placeholder="Enter entity name" type="text"/>
             </div>
             <div class="flex flex-col gap-2 md:col-span-2">
               <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Inquiry Type</label>
               <div class="relative">
-                <select class="w-full appearance-none bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors">
+                <select id="contact-inquiry" name="inquiry" class="w-full appearance-none bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors">
                   <option disabled selected value="">Select deployment domain</option>
-                  <option value="ai">AI Deployment Architecture</option>
+                  <option value="video">Video Surveillance</option>
                   <option value="cyber">Cybersecurity Infrastructure</option>
-                  <option value="iot">IoT Systems Integration</option>
+                  <option value="iot">IoT &amp; AI Systems</option>
+                  <option value="investment">Investment &amp; IP Partnership</option>
                   <option value="other">Other Technical Inquiry</option>
                 </select>
                 <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
@@ -101,17 +102,21 @@
             </div>
             <div class="flex flex-col gap-2 md:col-span-2">
               <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Project Overview</label>
-              <textarea class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors resize-none" placeholder="Outline primary objectives, current infrastructure challenges, and expected scale..." rows="4"></textarea>
+              <textarea id="contact-message" name="message" class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-electric-cyan transition-colors resize-none" placeholder="Outline primary objectives, current infrastructure challenges, and expected scale..." rows="4"></textarea>
             </div>
             <div class="md:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-2 pt-6 border-t border-white/10">
               <div class="flex items-center gap-2 text-on-surface-variant">
                 <span class="material-symbols-outlined text-base">lock</span>
                 <span class="font-label-sm text-label-sm uppercase">End-to-End Encrypted Transmission</span>
               </div>
-              <button class="bg-electric-cyan text-obsidian-base font-bold px-8 py-3.5 rounded-lg flex items-center justify-center gap-2 glow-cyan transition-all hover:brightness-110" type="button">
+              <button id="contact-submit" class="bg-electric-cyan text-obsidian-base font-bold px-8 py-3.5 rounded-lg flex items-center justify-center gap-2 transition-all hover:brightness-110" type="submit">
                 Submit Request
                 <span class="material-symbols-outlined">arrow_forward</span>
               </button>
+            </div>
+            <div id="contact-confirmation" class="md:col-span-2 hidden items-center gap-2 rounded-lg border border-electric-cyan/30 bg-electric-cyan/5 px-4 py-3 text-electric-cyan text-sm">
+              <span class="material-symbols-outlined text-base">check_circle</span>
+              <span>Thanks — your mail client should now be open with your request ready to send to jayson@nucleustech.online.</span>
             </div>
           </form>
         </div>
@@ -165,22 +170,30 @@
   <footer class="bg-obsidian-base border-t border-white/5 py-12 md:py-20">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-gutter px-4 md:px-12 max-w-container-max mx-auto">
       <div class="col-span-2 md:col-span-1">
-        <div class="font-headline-md text-headline-md font-bold text-on-surface mb-4 md:mb-6">Nucleus.io</div>
+        <a class="font-headline-md text-headline-md font-bold text-on-surface mb-4 md:mb-6 inline-block hover:text-electric-cyan transition-colors" href="index.html">Nucleus.io</a>
         <p class="text-on-surface-variant text-sm md:pr-8">Pioneering the architecture of tomorrow's intelligence. Secure. Scalable. Sovereign.</p>
       </div>
       <div>
-        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Legal &amp; Compliance</h5>
+        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Navigation</h5>
         <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
-          <li><a class="hover:text-electric-cyan transition-colors" href="#">Legal</a></li>
-          <li><a class="hover:text-electric-cyan transition-colors" href="#">Compliance</a></li>
+          <li><a class="hover:text-electric-cyan transition-colors" href="index.html">Home</a></li>
+          <li><a class="hover:text-electric-cyan transition-colors" href="about.html">About</a></li>
+          <li><a class="hover:text-electric-cyan transition-colors" href="Investments%20&amp;%20IP.html">Investments &amp; IP</a></li>
+          <li><a class="hover:text-electric-cyan transition-colors" href="proof.html">Proof</a></li>
+          <li><a class="hover:text-electric-cyan transition-colors" href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
-        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Resources</h5>
+        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Contact</h5>
         <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
-          <li><a class="hover:text-electric-cyan transition-colors" href="#">Documentation</a></li>
-          <li><a class="hover:text-electric-cyan transition-colors" href="#">Security</a></li>
-          <li><a class="hover:text-electric-cyan transition-colors" href="#">Privacy Policy</a></li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-electric-cyan text-base">mail</span>
+            <a class="hover:text-electric-cyan transition-colors" href="mailto:jayson@nucleustech.online?subject=You%20got%20mail%20from%20your%20website!">jayson@nucleustech.online</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-electric-cyan text-base">call</span>
+            <a class="hover:text-electric-cyan transition-colors" href="tel:+27646166943">+27 64 616 6943</a>
+          </li>
         </ul>
       </div>
       <div>
@@ -193,17 +206,10 @@
             <span class="material-symbols-outlined text-sm">share</span>
           </a>
         </div>
-        <div class="p-4 rounded bg-surface-navy border border-white/5">
-          <div class="text-xs text-on-surface-variant mb-1">SYSTEM_STATUS</div>
-          <div class="flex items-center gap-2">
-            <div class="h-2 w-2 rounded-full bg-electric-cyan"></div>
-            <span class="text-sm font-label-md">ALL_SYSTEMS_OPTIMAL</span>
-          </div>
-        </div>
       </div>
     </div>
     <div class="mt-12 md:mt-20 pt-8 border-t border-white/5 px-4 md:px-12 max-w-container-max mx-auto text-center text-on-surface-variant text-xs font-label-sm">
-      © 2024 Nucleus.io. Neural Security Systems. All rights reserved.
+      © 2026 Nucleus.io. Intelligent Security Systems. All rights reserved.
     </div>
   </footer>
   <script src="script.js"></script>

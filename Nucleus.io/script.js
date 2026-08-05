@@ -45,3 +45,30 @@ document.querySelectorAll('section').forEach(section => {
     section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
     observer.observe(section);
 });
+
+// Contact form submission -> mailto
+const contactForm = document.getElementById('contact-form');
+const contactConfirmation = document.getElementById('contact-confirmation');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('contact-name').value;
+        const email = document.getElementById('contact-email').value;
+        const organization = document.getElementById('contact-org').value;
+        const inquiry = document.getElementById('contact-inquiry').value;
+        const message = document.getElementById('contact-message').value;
+
+        const body = `Name: ${name}\nEmail: ${email}\nOrganization: ${organization}\nInquiry Type: ${inquiry}\n\nProject Overview:\n${message}`;
+        const subject = 'You got mail from your website!';
+        const mailtoLink = `mailto:jayson@nucleustech.online?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
+
+        if (contactConfirmation) {
+            contactConfirmation.classList.remove('hidden');
+            contactConfirmation.classList.add('flex');
+        }
+    });
+}
