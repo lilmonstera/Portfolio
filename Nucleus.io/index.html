@@ -13,7 +13,7 @@
 </head>
 <body class="font-body-md text-body-md selection:bg-electric-cyan selection:text-obsidian-base">
   <!-- TopNavBar -->
-  <nav class="fixed top-0 w-full z-50 bg-obsidian-base/80 backdrop-blur-xl border-b border-white/10">
+  <nav class="fixed top-0 w-full z-50 nav-glass backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_-10px_rgba(0,240,255,0.2)]">
     <div class="grid grid-cols-2 md:grid-cols-[auto_1fr_auto] items-center h-16 md:h-20 px-4 md:px-12 max-w-container-max mx-auto">
       <a class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface hover:text-electric-cyan transition-colors" href="index.html">Nucleus.io</a>
       <div class="hidden md:flex items-center justify-center gap-8 font-label-md text-label-md whitespace-nowrap">
@@ -44,7 +44,9 @@
 
   <main class="pt-16 md:pt-20">
     <!-- Hero Section -->
-    <section class="relative min-h-[90vh] md:min-h-[819px] flex items-center justify-center overflow-hidden px-4 md:px-margin-desktop pt-12 pb-16 md:pt-16 md:pb-20 technical-grid">
+    <section class="relative -mt-16 md:-mt-20 min-h-[90vh] md:min-h-[819px] flex items-center justify-center overflow-hidden px-4 md:px-margin-desktop pt-[112px] pb-16 md:pt-36 md:pb-20">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/iot-telekom-startseite-header.webp')"></div>
+      <div class="absolute inset-0 bg-obsidian-base/60"></div>
       <div class="absolute inset-0 pointer-events-none">
         <div class="absolute -top-24 -left-24 w-80 h-80 md:w-[28rem] md:h-[28rem] bg-electric-cyan/10 rounded-full blur-3xl animate-pulse" style="animation-duration: 6s;"></div>
         <div class="absolute -bottom-24 -right-24 w-80 h-80 md:w-[28rem] md:h-[28rem] bg-electric-cyan/10 rounded-full blur-3xl animate-pulse" style="animation-duration: 6s; animation-delay: 2s;"></div>
@@ -89,7 +91,6 @@
               <span class="bg-surface-navy/50 border border-white/5 px-4 py-2 rounded-full text-xs md:text-sm font-label-md text-on-surface-variant">IoT &amp; AI</span>
             </div>
           </div>
-          <div class="absolute right-[-10%] top-[-10%] w-1/2 h-full opacity-20 group-hover:opacity-40 transition-opacity"></div>
         </div>
         <!-- Small Feature -->
         <div class="md:col-span-4 bg-surface-navy border border-white/10 rounded-xl p-6 md:p-8 flex flex-col justify-between">
@@ -146,6 +147,9 @@
             See the Proof
             <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
+        </div>
+        <div class="rounded-xl overflow-hidden border border-white/10 mb-10 md:mb-12">
+          <img class="w-full h-56 sm:h-72 md:h-[420px] object-cover" src="assets/Modern%20national%20strategic%20operating%20center%20design.png" alt="Nucleus Security Operations Center" loading="lazy"/>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-gutter">
           <div class="glass-card border border-white/10 rounded-xl p-6 hover:border-electric-cyan/50 transition-colors duration-300">
