@@ -48,6 +48,7 @@
   </script>
 </head>
 <body class="font-body-md text-body-md selection:bg-electric-cyan selection:text-obsidian-base">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-electric-cyan focus:text-obsidian-base focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">Skip to main content</a>
   <!-- TopNavBar -->
   <nav class="fixed top-0 w-full z-50 nav-glass backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_-10px_rgba(0,240,255,0.2)]">
     <div class="grid grid-cols-2 md:grid-cols-[auto_1fr_auto] items-center h-16 md:h-20 px-4 md:px-12 max-w-container-max mx-auto">
@@ -68,7 +69,7 @@
       </div>
     </div>
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu md:hidden bg-obsidian-base/95 backdrop-blur-xl overflow-hidden max-h-0 transition-all duration-300">
+    <div id="mobile-menu" class="mobile-menu md:hidden bg-obsidian-base/95 backdrop-blur-xl overflow-hidden max-h-0 transition-all duration-300" inert>
       <div class="flex flex-col px-4 py-4 gap-1 font-label-md text-label-md">
         <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="about.html">About</a>
         <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="investments-ip.html">Investments &amp; IP</a>
@@ -78,7 +79,7 @@
     </div>
   </nav>
 
-  <main class="pt-16 md:pt-20">
+  <main id="main-content" class="pt-16 md:pt-20">
     <!-- Hero Section -->
     <section class="relative -mt-16 md:-mt-20 min-h-[90vh] md:min-h-[819px] flex items-center justify-center overflow-hidden px-4 md:px-margin-desktop pt-[112px] pb-16 md:pt-36 md:pb-20">
       <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/iot-telekom-startseite-header.webp')"></div>
@@ -98,7 +99,7 @@
         <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4 sm:px-0">
           <a href="about.html" class="bg-electric-cyan text-obsidian-base px-6 md:px-8 py-3.5 md:py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition-all hover:brightness-110">
             See How Nucleus Works
-            <span class="material-symbols-outlined">arrow_forward</span>
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
           </a>
           <a href="investments-ip.html" class="border border-white/20 text-on-surface px-6 md:px-8 py-3.5 md:py-4 rounded-lg font-bold hover:bg-white/5 transition-all">View Investments &amp; IP</a>
         </div>
@@ -138,28 +139,28 @@
           <div class="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/5">
             <a class="text-electric-cyan flex items-center gap-2 font-label-md hover:underline" href="investments-ip.html">
               Explore the Portfolio
-              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
             </a>
           </div>
         </div>
         <!-- Capability Cards -->
         <div class="md:col-span-4 glass-card border border-white/10 rounded-xl p-6 md:p-8">
           <div class="h-12 w-12 rounded bg-electric-cyan/10 flex items-center justify-center mb-4 md:mb-6">
-            <span class="material-symbols-outlined text-electric-cyan">videocam</span>
+            <span class="material-symbols-outlined text-electric-cyan" aria-hidden="true">videocam</span>
           </div>
           <h4 class="card-headline font-semibold mb-3">Video Surveillance</h4>
           <p class="text-on-surface-variant text-sm">Enterprise-grade deployments at a scale that stands up anywhere in the world, from retail networks to national infrastructure.</p>
         </div>
         <div class="md:col-span-4 glass-card border border-white/10 rounded-xl p-6 md:p-8">
           <div class="h-12 w-12 rounded bg-electric-cyan/10 flex items-center justify-center mb-4 md:mb-6">
-            <span class="material-symbols-outlined text-electric-cyan">shield</span>
+            <span class="material-symbols-outlined text-electric-cyan" aria-hidden="true">shield</span>
           </div>
           <h4 class="card-headline font-semibold mb-3">Cybersecurity</h4>
           <p class="text-on-surface-variant text-sm">Built for organisations that already understand what's at stake, where getting it wrong has real consequences.</p>
         </div>
         <div class="md:col-span-4 glass-card border border-white/10 rounded-xl p-6 md:p-8">
           <div class="h-12 w-12 rounded bg-electric-cyan/10 flex items-center justify-center mb-4 md:mb-6">
-            <span class="material-symbols-outlined text-electric-cyan">sensors</span>
+            <span class="material-symbols-outlined text-electric-cyan" aria-hidden="true">sensors</span>
           </div>
           <h4 class="card-headline font-semibold mb-3">IoT &amp; AI</h4>
           <p class="text-on-surface-variant text-sm">Connected, intelligent infrastructure that unifies physical and digital security into a single operating standard.</p>
@@ -181,7 +182,7 @@
           </div>
           <a href="proof.html" class="self-start sm:self-auto whitespace-nowrap bg-electric-cyan text-obsidian-base font-label-md px-6 py-2.5 rounded-lg font-bold transition-transform hover:scale-105 inline-flex items-center gap-2">
             See the Proof
-            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
           </a>
         </div>
         <div class="rounded-xl overflow-hidden border border-white/10 mb-10 md:mb-12">
@@ -189,22 +190,22 @@
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-gutter">
           <div class="glass-card border border-white/10 rounded-xl p-6 hover:border-electric-cyan/50 transition-colors duration-300">
-            <span class="material-symbols-outlined text-electric-cyan mb-3 block">public</span>
+            <span class="material-symbols-outlined text-electric-cyan mb-3 block" aria-hidden="true">public</span>
             <h3 class="card-headline font-semibold mb-1 text-white">Colgate</h3>
             <p class="text-on-surface-variant text-sm">Global video surveillance deployment</p>
           </div>
           <div class="glass-card border border-white/10 rounded-xl p-6 hover:border-electric-cyan/50 transition-colors duration-300">
-            <span class="material-symbols-outlined text-electric-cyan mb-3 block">storefront</span>
+            <span class="material-symbols-outlined text-electric-cyan mb-3 block" aria-hidden="true">storefront</span>
             <h3 class="card-headline font-semibold mb-1 text-white">Woolworths</h3>
             <p class="text-on-surface-variant text-sm">National security rollout</p>
           </div>
           <div class="glass-card border border-white/10 rounded-xl p-6 hover:border-electric-cyan/50 transition-colors duration-300">
-            <span class="material-symbols-outlined text-electric-cyan mb-3 block">stadium</span>
+            <span class="material-symbols-outlined text-electric-cyan mb-3 block" aria-hidden="true">stadium</span>
             <h3 class="card-headline font-semibold mb-1 text-white">FIFA World Cup Stadium</h3>
             <p class="text-on-surface-variant text-sm">High-stakes delivery under scrutiny</p>
           </div>
           <div class="glass-card border border-white/10 rounded-xl p-6 hover:border-electric-cyan/50 transition-colors duration-300">
-            <span class="material-symbols-outlined text-electric-cyan mb-3 block">factory</span>
+            <span class="material-symbols-outlined text-electric-cyan mb-3 block" aria-hidden="true">factory</span>
             <h3 class="card-headline font-semibold mb-1 text-white">Sasol</h3>
             <p class="text-on-surface-variant text-sm">Critical infrastructure protection</p>
           </div>
@@ -212,7 +213,7 @@
         <div class="mt-10 md:mt-12 text-center">
           <a href="proof.html" class="inline-flex items-center gap-2 text-electric-cyan font-label-md border border-electric-cyan px-6 py-2.5 rounded hover:bg-electric-cyan/10 transition-all">
             Read the Full Story
-            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
           </a>
         </div>
       </div>
@@ -229,14 +230,14 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-gutter">
         <div class="glass-card border border-white/10 p-8 md:p-10 rounded-xl">
           <div class="w-12 h-12 rounded-lg bg-electric-cyan flex items-center justify-center text-obsidian-base mb-6">
-            <span class="material-symbols-outlined text-3xl">domain</span>
+            <span class="material-symbols-outlined text-3xl" aria-hidden="true">domain</span>
           </div>
           <h3 class="card-headline font-semibold text-white mb-4">For Enterprise Buyers</h3>
           <p class="text-on-surface-variant">Technology deployment and advisory across AI, cybersecurity and IoT, built for organisations that already understand what's at stake.</p>
         </div>
         <div class="glass-card border border-white/10 p-8 md:p-10 rounded-xl">
           <div class="w-12 h-12 rounded-lg bg-electric-cyan flex items-center justify-center text-obsidian-base mb-6">
-            <span class="material-symbols-outlined text-3xl">workspace_premium</span>
+            <span class="material-symbols-outlined text-3xl" aria-hidden="true">workspace_premium</span>
           </div>
           <h3 class="card-headline font-semibold text-white mb-4">For Investors &amp; IP Partners</h3>
           <p class="text-on-surface-variant">A portfolio anchored in owned technology, not borrowed capability.</p>
@@ -245,7 +246,7 @@
       <div class="mt-10 md:mt-12 text-center">
         <a href="about.html" class="inline-flex items-center gap-2 text-electric-cyan font-label-md border border-electric-cyan px-6 py-2.5 rounded hover:bg-electric-cyan/10 transition-all">
           See How Nucleus Works
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
         </a>
       </div>
     </section>
@@ -276,7 +277,7 @@
         <p class="text-on-surface-variant text-sm md:pr-8">Pioneering the architecture of tomorrow's intelligence. Secure. Scalable. Sovereign.</p>
       </div>
       <div>
-        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Navigation</h5>
+        <h2 class="font-label-md text-electric-cyan mb-4 md:mb-6">Navigation</h2>
         <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
           <li><a class="hover:text-electric-cyan transition-colors" href="index.html">Home</a></li>
           <li><a class="hover:text-electric-cyan transition-colors" href="about.html">About</a></li>
@@ -286,24 +287,24 @@
         </ul>
       </div>
       <div>
-        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Contact</h5>
+        <h2 class="font-label-md text-electric-cyan mb-4 md:mb-6">Contact</h2>
         <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
           <li class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-electric-cyan text-base">mail</span>
+            <span class="material-symbols-outlined text-electric-cyan text-base" aria-hidden="true">mail</span>
             <a class="hover:text-electric-cyan transition-colors" href="mailto:jayson@nucleustech.online?subject=You%20got%20mail%20from%20your%20website!">jayson@nucleustech.online</a>
           </li>
           <li class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-electric-cyan text-base">call</span>
+            <span class="material-symbols-outlined text-electric-cyan text-base" aria-hidden="true">call</span>
             <a class="hover:text-electric-cyan transition-colors" href="tel:+27646166943">+27 64 616 6943</a>
           </li>
         </ul>
-        <h5 class="font-label-md text-electric-cyan mt-6 mb-4 md:mb-6">Connect</h5>
+        <h2 class="font-label-md text-electric-cyan mt-6 mb-4 md:mb-6">Connect</h2>
         <div class="flex gap-4 mb-4 md:mb-6">
-          <a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#">
-            <span class="material-symbols-outlined text-sm">terminal</span>
+          <a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#" aria-label="GitHub"><!-- TODO: replace with real GitHub URL -->
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">terminal</span>
           </a>
-          <a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#">
-            <span class="material-symbols-outlined text-sm">share</span>
+          <a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#" aria-label="LinkedIn"><!-- TODO: replace with real LinkedIn URL -->
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">share</span>
           </a>
         </div>
       </div>

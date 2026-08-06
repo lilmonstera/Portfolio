@@ -25,6 +25,7 @@ if (mobileMenuBtn && mobileMenu) {
         const isOpen = mobileMenu.classList.toggle('open');
         mobileMenuBtn.classList.toggle('mobile-menu-btn-open', isOpen);
         mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.toggleAttribute('inert', !isOpen);
     });
 
     // Close menu when a link is clicked
@@ -33,6 +34,7 @@ if (mobileMenuBtn && mobileMenu) {
             mobileMenu.classList.remove('open');
             mobileMenuBtn.classList.remove('mobile-menu-btn-open');
             mobileMenuBtn.setAttribute('aria-expanded', false);
+            mobileMenu.setAttribute('inert', '');
         });
     });
 }

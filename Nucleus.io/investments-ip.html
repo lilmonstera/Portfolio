@@ -29,6 +29,7 @@
 <link href="styles.css" rel="stylesheet"/>
 </head>
 <body class="font-body-md overflow-x-hidden">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-electric-cyan focus:text-obsidian-base focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">Skip to main content</a>
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 nav-glass backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_-10px_rgba(0,240,255,0.2)] transition-all duration-200 ease-in-out">
 <div class="grid grid-cols-2 md:grid-cols-[auto_1fr_auto] items-center h-16 md:h-20 px-4 md:px-margin max-w-container-max mx-auto">
@@ -48,7 +49,7 @@
 </div>
 </div>
 <!-- Mobile Menu -->
-<div class="mobile-menu md:hidden bg-obsidian-base/95 backdrop-blur-xl overflow-hidden max-h-0 transition-all duration-300" id="mobile-menu">
+<div class="mobile-menu md:hidden bg-obsidian-base/95 backdrop-blur-xl overflow-hidden max-h-0 transition-all duration-300" id="mobile-menu" inert>
 <div class="flex flex-col px-4 py-4 gap-1 font-label-md text-label-md">
 <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="about.html">About</a>
 <a class="text-electric-cyan py-3 border-b border-white/5" href="investments-ip.html">Investments &amp; IP</a>
@@ -57,7 +58,7 @@
 </div>
 </div>
 </nav>
-<main class="pt-16 md:pt-20">
+<main id="main-content" class="pt-16 md:pt-20">
 <!-- Hero Section -->
 <section class="relative -mt-16 md:-mt-20 pt-16 md:pt-20 min-h-[560px] flex items-center overflow-hidden technical-grid px-4 md:px-margin">
 
@@ -106,16 +107,16 @@
 </div>
 <div class="lg:col-span-7 grid grid-cols-2 gap-sm">
 <div class="relative group overflow-hidden border-technical">
-<img class="w-full h-[500px] object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0" alt="A modern, modular traffic light system installed at a sleek urban intersection during twilight. The design is lightweight and contemporary, featuring integrated cameras and sensors. The lighting is cinematic, with streaks of car headlights creating long exposures against a dark, rainy asphalt. The aesthetic is tech-focused and urban, with a color palette of deep charcoal and glowing cyan light indicators." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSxRIQLPds7CrPpS9JYmBVh7Jch8IeIYpk7Z_bGeq1hLYEhyGCELuow5ccK5YnTRLJEl5ewKW-DEEORq6bPABFPbdUdnKpHTcJy4FJxZG08nOcNp1bf3jvdwGbikCwNf6pmHMzWHCmpwf3fsGnET9izY5tsDopzLuuTlP0Y0AUKwacndML9_ZCCOwWsSwOmliyUqwxvmp9ooCe-GpHBXGthQYMichM-ktXRfvQ11nsk6wLWc5f27Ho"/>
+<img class="w-full h-[500px] object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0" alt="MTLS modular traffic light system installed at an urban intersection at night, with integrated cameras and sensors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSxRIQLPds7CrPpS9JYmBVh7Jch8IeIYpk7Z_bGeq1hLYEhyGCELuow5ccK5YnTRLJEl5ewKW-DEEORq6bPABFPbdUdnKpHTcJy4FJxZG08nOcNp1bf3jvdwGbikCwNf6pmHMzWHCmpwf3fsGnET9izY5tsDopzLuuTlP0Y0AUKwacndML9_ZCCOwWsSwOmliyUqwxvmp9ooCe-GpHBXGthQYMichM-ktXRfvQ11nsk6wLWc5f27Ho"/>
 <div class="absolute inset-0 bg-gradient-to-t from-[#050608] via-transparent to-transparent opacity-60"></div>
 </div>
 <div class="flex flex-col gap-sm">
 <div class="flex-1 bg-surface-container-high p-lg border-technical relative group">
-<span class="material-symbols-outlined text-cyan-accent text-3xl mb-4">military_tech</span>
+<span class="material-symbols-outlined text-cyan-accent text-3xl mb-4" aria-hidden="true">military_tech</span>
 <h4 class="font-headline-md text-headline-md text-primary mb-2">Award Winning</h4>
 <p class="font-body-sm text-body-sm text-on-surface-variant">MTLS has been recognised with a SABS Design Award for Excellence, featured in a national retrospective on South African design, displayed at the Smithsonian in New York, and named the only African winner of the China Red Star Design Award — one of the largest design honours in the world.</p>
 <div class="absolute top-2 right-2 opacity-10 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-6xl">workspace_premium</span>
+<span class="material-symbols-outlined text-6xl" aria-hidden="true">workspace_premium</span>
 </div>
 </div>
 <div class="flex-1 bg-surface-container-high p-lg border-technical">
@@ -142,20 +143,20 @@
 <div class="grid grid-cols-2 gap-md relative z-10">
 <div class="space-y-md">
 <div class="h-[200px] bg-surface-container-highest border-technical flex items-center justify-center overflow-hidden">
-<img class="w-full h-full object-cover" alt="A detailed 3D technical rendering of an underground cable security system. The image shows industrial armored cables protected by a robust, modular mechanical lock. The lighting is sharp and industrial, highlighting metallic textures and safety yellow accents against a dark, technical background. The style is that of a patent drawing brought to life with realistic textures and high-contrast shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ6ZmA-Tj60ETFlli-iK9s6UDZW43_ZnxBjgV3Df69eSKMuPoV35QSqiTcVsHzXeH_MGxwwYob5z25HgCpWw9e5lF_zqVrOWdrw0rEVTEd2tQNDYMuFN2z4cSIggpjjNZCN5s_5P3RBv7jjgHnkOwVa-u6488L9qQD0CAC82iIgPcSf5pOKdEcOOiTsoPlaaHXojVUjA94k7nmnT4u2ANpncJTkcBaSFT2mgOhk5u9Uzn0jxSnDeWD"/>
+<img class="w-full h-full object-cover" alt="Technical rendering of the Meerkat mechanical lock securing underground armored cable against extraction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ6ZmA-Tj60ETFlli-iK9s6UDZW43_ZnxBjgV3Df69eSKMuPoV35QSqiTcVsHzXeH_MGxwwYob5z25HgCpWw9e5lF_zqVrOWdrw0rEVTEd2tQNDYMuFN2z4cSIggpjjNZCN5s_5P3RBv7jjgHnkOwVa-u6488L9qQD0CAC82iIgPcSf5pOKdEcOOiTsoPlaaHXojVUjA94k7nmnT4u2ANpncJTkcBaSFT2mgOhk5u9Uzn0jxSnDeWD"/>
 </div>
 <div class="p-md bg-surface-container-low border-technical">
-<h5 class="font-label-md text-primary text-[10px] uppercase mb-2">Mechanical Core</h5>
+<h2 class="font-label-md text-primary text-[10px] uppercase mb-2">Mechanical Core</h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant italic">"Prevents low- and medium-voltage cable extraction."</p>
 </div>
 </div>
 <div class="space-y-md mt-lg">
 <div class="p-md bg-surface-container-low border-technical">
-<h5 class="font-label-md text-cyan-accent text-[10px] uppercase mb-2">GPS Monitoring</h5>
+<h2 class="font-label-md text-cyan-accent text-[10px] uppercase mb-2">GPS Monitoring</h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant italic">"High-voltage early-warning detection."</p>
 </div>
 <div class="h-[200px] bg-surface-container-highest border-technical flex items-center justify-center overflow-hidden">
-<img class="w-full h-full object-cover" alt="A visualization of a GPS satellite tracking network over a dark night landscape. Electric blue data lines connect ground stations to a central hub, illustrating high-value asset protection and early warning systems. The atmosphere is high-tech and surveillance-focused, with a cold color temperature and sharp technical UI elements overlaying the map." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1ozBWdw0uJ9X2CVzg6wA6HV72ZHOwtW-mEjO6vXSiP8jJ6tBK9RfX4zEX9100bTS1fRO3b5idW9fZtLkjO8dfnSxWOlfV30JTrxi3yyEHeU-h7UlWwMN9_FnRD5U_OWm74IxoASD0R2VYP0tJDxrI1B4ZkfcEHhN3JRW2O1DGvd0taa_aPAit6omTfTk02EMgtQiaqPMSMSs-RbL8qmsAxDZfl7im2MibQtIrEYYo6FbdPlah5KHY"/>
+<img class="w-full h-full object-cover" alt="Visualization of Meerkat's GPS tracking network connecting ground stations to a central monitoring hub." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1ozBWdw0uJ9X2CVzg6wA6HV72ZHOwtW-mEjO6vXSiP8jJ6tBK9RfX4zEX9100bTS1fRO3b5idW9fZtLkjO8dfnSxWOlfV30JTrxi3yyEHeU-h7UlWwMN9_FnRD5U_OWm74IxoASD0R2VYP0tJDxrI1B4ZkfcEHhN3JRW2O1DGvd0taa_aPAit6omTfTk02EMgtQiaqPMSMSs-RbL8qmsAxDZfl7im2MibQtIrEYYo6FbdPlah5KHY"/>
 </div>
 </div>
 </div>
@@ -169,12 +170,12 @@
                         </p>
 <div class="grid grid-cols-2 gap-lg pt-md">
 <div class="space-y-2">
-<span class="material-symbols-outlined text-cyan-accent">security</span>
+<span class="material-symbols-outlined text-cyan-accent" aria-hidden="true">security</span>
 <h4 class="font-headline-md text-headline-md text-primary">Physical Barrier</h4>
 <p class="font-body-sm text-body-sm text-on-surface-variant">Reinforced mechanical containment prevents illegal extraction.</p>
 </div>
 <div class="space-y-2">
-<span class="material-symbols-outlined text-cyan-accent">radar</span>
+<span class="material-symbols-outlined text-cyan-accent" aria-hidden="true">radar</span>
 <h4 class="font-headline-md text-headline-md text-primary">Active Alert</h4>
 <p class="font-body-sm text-body-sm text-on-surface-variant">Real-time GPS tracking triggers instant rapid response.</p>
 </div>
@@ -196,7 +197,7 @@
 <button class="bg-electric-cyan text-obsidian-base font-bold px-lg py-4 font-label-md tracking-widest uppercase hover:scale-105 transition-transform">Talk to the Investment Team</button>
 <a class="inline-flex items-center gap-sm group" href="#">
 <span class="font-label-md text-primary uppercase tracking-widest text-xs border-b border-electric-cyan pb-1">View Full Asset Register</span>
-<span class="material-symbols-outlined text-electric-cyan group-hover:translate-x-2 transition-transform">arrow_forward</span>
+<span class="material-symbols-outlined text-electric-cyan group-hover:translate-x-2 transition-transform" aria-hidden="true">arrow_forward</span>
 </a>
 </div>
 </div>
@@ -210,9 +211,9 @@
 <h3 class="font-headline-md text-headline-md text-primary">Portfolio Alpha</h3>
 <p class="font-body-sm text-on-surface-variant">Current pipeline of proprietary technology assets.</p>
 </div>
-<div class="hidden md:flex gap-2">
-<div class="w-10 h-10 border-technical flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined">chevron_left</span></div>
-<div class="w-10 h-10 border-technical flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined">chevron_right</span></div>
+<div class="hidden md:flex gap-2" aria-hidden="true">
+<div class="w-10 h-10 border-technical flex items-center justify-center text-on-surface-variant"><span class="material-symbols-outlined">chevron_left</span></div>
+<div class="w-10 h-10 border-technical flex items-center justify-center text-on-surface-variant"><span class="material-symbols-outlined">chevron_right</span></div>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
@@ -225,7 +226,7 @@
 </div>
 <div class="relative z-10 space-y-md">
 <p class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-primary transition-colors">AI-driven traffic flow optimization algorithms for smart city hubs.</p>
-<span class="material-symbols-outlined text-cyan-accent text-4xl" style="font-variation-settings: 'FILL' 1;">insights</span>
+<span class="material-symbols-outlined text-cyan-accent text-4xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">insights</span>
 </div>
 </div>
 <!-- Grid Item 2 -->
@@ -237,7 +238,7 @@
 </div>
 <div class="relative z-10 space-y-md">
 <p class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-primary transition-colors">Proprietary shielding for high-voltage transmission security.</p>
-<span class="material-symbols-outlined text-cyan-accent text-4xl" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="material-symbols-outlined text-cyan-accent text-4xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">shield</span>
 </div>
 </div>
 <!-- Grid Item 3 -->
@@ -249,17 +250,17 @@
 </div>
 <div class="relative z-10 space-y-md">
 <p class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-primary transition-colors">Advanced computer vision module for real-time risk assessment.</p>
-<span class="material-symbols-outlined text-cyan-accent text-4xl" style="font-variation-settings: 'FILL' 1;">visibility</span>
+<span class="material-symbols-outlined text-cyan-accent text-4xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">visibility</span>
 </div>
 </div>
 <!-- Grid Item 4 (CTA) -->
-<div class="group relative aspect-[4/5] border border-dashed border-outline-variant flex items-center justify-center p-lg text-center hover:bg-surface-container transition-colors cursor-pointer">
+<a href="contact.html" class="group relative aspect-[4/5] border border-dashed border-outline-variant flex items-center justify-center p-lg text-center hover:bg-surface-container transition-colors focus:outline-none focus:ring-2 focus:ring-electric-cyan">
 <div class="space-y-md">
-<span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-cyan-accent transition-colors">add_circle</span>
+<span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-cyan-accent transition-colors" aria-hidden="true">add_circle</span>
 <h4 class="font-headline-md text-headline-md text-primary">Investor Inquiries</h4>
 <p class="font-body-sm text-body-sm text-on-surface-variant">Request detailed documentation for entire IP portfolio.</p>
 </div>
-</div>
+</a>
 </div>
 </div>
 </section>
@@ -272,7 +273,7 @@
 <p class="text-on-surface-variant text-sm md:pr-8">Pioneering the architecture of tomorrow's intelligence. Secure. Scalable. Sovereign.</p>
 </div>
 <div>
-<h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Navigation</h5>
+<h2 class="font-label-md text-electric-cyan mb-4 md:mb-6">Navigation</h2>
 <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
 <li><a class="hover:text-electric-cyan transition-colors" href="index.html">Home</a></li>
 <li><a class="hover:text-electric-cyan transition-colors" href="about.html">About</a></li>
@@ -282,24 +283,24 @@
 </ul>
 </div>
 <div>
-<h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Contact</h5>
+<h2 class="font-label-md text-electric-cyan mb-4 md:mb-6">Contact</h2>
 <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
 <li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-electric-cyan text-base">mail</span>
+<span class="material-symbols-outlined text-electric-cyan text-base" aria-hidden="true">mail</span>
 <a class="hover:text-electric-cyan transition-colors" href="mailto:jayson@nucleustech.online?subject=You%20got%20mail%20from%20your%20website!">jayson@nucleustech.online</a>
 </li>
 <li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-electric-cyan text-base">call</span>
+<span class="material-symbols-outlined text-electric-cyan text-base" aria-hidden="true">call</span>
 <a class="hover:text-electric-cyan transition-colors" href="tel:+27646166943">+27 64 616 6943</a>
 </li>
 </ul>
-<h5 class="font-label-md text-electric-cyan mt-6 mb-4 md:mb-6">Connect</h5>
+<h2 class="font-label-md text-electric-cyan mt-6 mb-4 md:mb-6">Connect</h2>
 <div class="flex gap-4 mb-4 md:mb-6">
-<a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#">
-<span class="material-symbols-outlined text-sm">terminal</span>
+<a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#" aria-label="GitHub"><!-- TODO: replace with real GitHub URL -->
+<span class="material-symbols-outlined text-sm" aria-hidden="true">terminal</span>
 </a>
-<a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#">
-<span class="material-symbols-outlined text-sm">share</span>
+<a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#" aria-label="LinkedIn"><!-- TODO: replace with real LinkedIn URL -->
+<span class="material-symbols-outlined text-sm" aria-hidden="true">share</span>
 </a>
 </div>
 </div>

@@ -30,6 +30,7 @@
   <link href="styles.css" rel="stylesheet"/>
 </head>
 <body class="font-body-md text-body-md selection:bg-electric-cyan selection:text-obsidian-base">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-electric-cyan focus:text-obsidian-base focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">Skip to main content</a>
   <!-- TopNavBar -->
   <nav class="fixed top-0 w-full z-50 nav-glass backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_-10px_rgba(0,240,255,0.2)]">
     <div class="grid grid-cols-2 md:grid-cols-[auto_1fr_auto] items-center h-16 md:h-20 px-4 md:px-12 max-w-container-max mx-auto">
@@ -50,7 +51,7 @@
       </div>
     </div>
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu md:hidden bg-obsidian-base/95 backdrop-blur-xl overflow-hidden max-h-0 transition-all duration-300">
+    <div id="mobile-menu" class="mobile-menu md:hidden bg-obsidian-base/95 backdrop-blur-xl overflow-hidden max-h-0 transition-all duration-300" inert>
       <div class="flex flex-col px-4 py-4 gap-1 font-label-md text-label-md">
         <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="about.html">About</a>
         <a class="text-on-surface-variant hover:text-on-surface py-3 border-b border-white/5 transition-colors" href="investments-ip.html">Investments &amp; IP</a>
@@ -60,7 +61,7 @@
     </div>
   </nav>
 
-  <main class="pt-16 md:pt-20">
+  <main id="main-content" class="pt-16 md:pt-20">
     <!-- Hero Section -->
     <section class="relative -mt-16 md:-mt-20 pt-[104px] md:pt-36 pb-8 md:pb-12 px-4 md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-electric-cyan/30 bg-electric-cyan/5 mb-6 md:mb-8">
@@ -81,7 +82,7 @@
           </div>
           <div class="p-6 md:p-8 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-3">
-              <span class="material-symbols-outlined text-electric-cyan">public</span>
+              <span class="material-symbols-outlined text-electric-cyan" aria-hidden="true">public</span>
               <h2 class="card-headline font-semibold text-white">Colgate</h2>
             </div>
             <p class="text-on-surface-variant text-sm md:text-base">A global video surveillance deployment — proof that Nucleus's execution stands up to international scrutiny, not just local demand.</p>
@@ -94,7 +95,7 @@
           </div>
           <div class="p-6 md:p-8 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-3">
-              <span class="material-symbols-outlined text-electric-cyan">storefront</span>
+              <span class="material-symbols-outlined text-electric-cyan" aria-hidden="true">storefront</span>
               <h2 class="card-headline font-semibold text-white">Woolworths</h2>
             </div>
             <p class="text-on-surface-variant text-sm md:text-base">A national rollout across one of the country's most recognisable retail brands — proof of scale and reliability under a household name.</p>
@@ -107,7 +108,7 @@
           </div>
           <div class="p-6 md:p-8 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-3">
-              <span class="material-symbols-outlined text-electric-cyan">stadium</span>
+              <span class="material-symbols-outlined text-electric-cyan" aria-hidden="true">stadium</span>
               <h2 class="card-headline font-semibold text-white">FIFA World Cup Stadium</h2>
             </div>
             <p class="text-on-surface-variant text-sm md:text-base">High-profile, security-critical delivery, executed under the kind of scrutiny and pressure that leaves no room for error.</p>
@@ -120,7 +121,7 @@
           </div>
           <div class="p-6 md:p-8 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-3">
-              <span class="material-symbols-outlined text-electric-cyan">factory</span>
+              <span class="material-symbols-outlined text-electric-cyan" aria-hidden="true">factory</span>
               <h2 class="card-headline font-semibold text-white">Sasol</h2>
             </div>
             <p class="text-on-surface-variant text-sm md:text-base">Industrial and critical infrastructure protection — proof of trust in a sector where failure was never an option.</p>
@@ -145,14 +146,14 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-gutter">
         <div class="glass-card border border-white/10 p-8 md:p-10 rounded-xl">
           <div class="w-12 h-12 rounded-lg bg-electric-cyan flex items-center justify-center text-obsidian-base mb-6">
-            <span class="material-symbols-outlined text-3xl">workspace_premium</span>
+            <span class="material-symbols-outlined text-3xl" aria-hidden="true">workspace_premium</span>
           </div>
           <h3 class="card-headline font-semibold text-white mb-4">Ownership, not just implementation</h3>
           <p class="text-on-surface-variant">Nucleus holds proprietary technology it developed and owns outright — proof that the business builds intellectual property rather than simply integrating other providers' systems. That distinction shapes everything from how Nucleus is positioned to who it partners with.</p>
         </div>
         <div class="glass-card border border-white/10 p-8 md:p-10 rounded-xl">
           <div class="w-12 h-12 rounded-lg bg-electric-cyan flex items-center justify-center text-obsidian-base mb-6">
-            <span class="material-symbols-outlined text-3xl">groups</span>
+            <span class="material-symbols-outlined text-3xl" aria-hidden="true">groups</span>
           </div>
           <h3 class="card-headline font-semibold text-white mb-6">Who this is built for</h3>
           <div class="space-y-5">
@@ -186,7 +187,7 @@
         <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
           <a class="bg-electric-cyan text-obsidian-base font-bold px-8 md:px-10 py-3.5 md:py-4 rounded-lg hover:brightness-110 transition-all inline-flex items-center justify-center gap-2" href="investments-ip.html">
             See the Technology Behind the Proof
-            <span class="material-symbols-outlined">arrow_forward</span>
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
           </a>
           <a class="border border-white/20 text-on-surface px-8 md:px-10 py-3.5 md:py-4 rounded-lg font-bold hover:bg-white/5 transition-all inline-flex items-center justify-center" href="contact.html">
             Talk to Us
@@ -204,7 +205,7 @@
         <p class="text-on-surface-variant text-sm md:pr-8">Pioneering the architecture of tomorrow's intelligence. Secure. Scalable. Sovereign.</p>
       </div>
       <div>
-        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Navigation</h5>
+        <h2 class="font-label-md text-electric-cyan mb-4 md:mb-6">Navigation</h2>
         <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
           <li><a class="hover:text-electric-cyan transition-colors" href="index.html">Home</a></li>
           <li><a class="hover:text-electric-cyan transition-colors" href="about.html">About</a></li>
@@ -214,24 +215,24 @@
         </ul>
       </div>
       <div>
-        <h5 class="font-label-md text-electric-cyan mb-4 md:mb-6">Contact</h5>
+        <h2 class="font-label-md text-electric-cyan mb-4 md:mb-6">Contact</h2>
         <ul class="space-y-3 md:space-y-4 font-body-md text-body-md text-on-surface-variant text-sm">
           <li class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-electric-cyan text-base">mail</span>
+            <span class="material-symbols-outlined text-electric-cyan text-base" aria-hidden="true">mail</span>
             <a class="hover:text-electric-cyan transition-colors" href="mailto:jayson@nucleustech.online?subject=You%20got%20mail%20from%20your%20website!">jayson@nucleustech.online</a>
           </li>
           <li class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-electric-cyan text-base">call</span>
+            <span class="material-symbols-outlined text-electric-cyan text-base" aria-hidden="true">call</span>
             <a class="hover:text-electric-cyan transition-colors" href="tel:+27646166943">+27 64 616 6943</a>
           </li>
         </ul>
-        <h5 class="font-label-md text-electric-cyan mt-6 mb-4 md:mb-6">Connect</h5>
+        <h2 class="font-label-md text-electric-cyan mt-6 mb-4 md:mb-6">Connect</h2>
         <div class="flex gap-4 mb-4 md:mb-6">
-          <a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#">
-            <span class="material-symbols-outlined text-sm">terminal</span>
+          <a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#" aria-label="GitHub"><!-- TODO: replace with real GitHub URL -->
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">terminal</span>
           </a>
-          <a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#">
-            <span class="material-symbols-outlined text-sm">share</span>
+          <a class="h-10 w-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors" href="#" aria-label="LinkedIn"><!-- TODO: replace with real LinkedIn URL -->
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">share</span>
           </a>
         </div>
       </div>
