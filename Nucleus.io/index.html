@@ -258,12 +258,14 @@
       <div class="relative z-10 max-w-4xl mx-auto text-center glass-card p-8 sm:p-12 md:p-20 border border-white/10 rounded-2xl">
         <h2 class="section-headline font-bold mb-5 md:mb-6">One Company. <span class="text-electric-cyan">Two Ways In.</span></h2>
         <p class="text-base md:text-body-lg text-on-surface-variant mb-8 md:mb-12">Whether you're deploying at scale or evaluating the portfolio behind it, our team is ready to talk.</p>
-        <form class="max-w-md mx-auto flex flex-col gap-4">
+        <form id="hero-lead-form" class="max-w-md mx-auto flex flex-col gap-4">
           <div class="relative">
-            <input class="w-full bg-obsidian-base border border-white/10 rounded-lg px-5 md:px-6 py-3.5 md:py-4 focus:outline-none focus:border-electric-cyan transition-colors text-on-surface" placeholder="Corporate Email" type="email"/>
+            <label for="hero-lead-email" class="sr-only">Corporate Email</label>
+            <input id="hero-lead-email" name="email" required class="w-full bg-obsidian-base border border-white/10 rounded-lg px-5 md:px-6 py-3.5 md:py-4 focus:outline-none focus:ring-2 focus:ring-electric-cyan focus:border-electric-cyan transition-colors text-on-surface" placeholder="Corporate Email" type="email"/>
           </div>
-          <button class="bg-electric-cyan text-obsidian-base font-bold px-8 md:px-10 py-3.5 md:py-4 rounded-lg hover:brightness-110 transition-all">Start the Conversation</button>
+          <button type="submit" class="bg-electric-cyan text-obsidian-base font-bold px-8 md:px-10 py-3.5 md:py-4 rounded-lg hover:brightness-110 transition-all">Start the Conversation</button>
           <p class="text-xs text-on-surface-variant mt-2 md:mt-4">By submitting, you agree to be contacted by the Nucleus team.</p>
+          <p id="hero-lead-confirmation" class="hidden text-sm text-electric-cyan mt-2" role="status">Thanks — your mail client should now be open with your request ready to send.</p>
         </form>
       </div>
     </section>

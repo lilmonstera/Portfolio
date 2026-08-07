@@ -65,3 +65,25 @@ if (contactForm) {
         }
     });
 }
+
+// Homepage hero lead capture -> mailto
+const heroLeadForm = document.getElementById('hero-lead-form');
+const heroLeadConfirmation = document.getElementById('hero-lead-confirmation');
+
+if (heroLeadForm) {
+    heroLeadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById('hero-lead-email').value;
+
+        const body = `Corporate Email: ${email}\n\nRequesting an introductory conversation with the Nucleus team.`;
+        const subject = 'You got mail from your website!';
+        const mailtoLink = `mailto:jayson@nucleustech.online?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
+
+        if (heroLeadConfirmation) {
+            heroLeadConfirmation.classList.remove('hidden');
+        }
+    });
+}
