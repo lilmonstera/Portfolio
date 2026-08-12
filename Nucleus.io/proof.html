@@ -41,9 +41,9 @@
         <a class="text-electric-cyan border-b-2 border-electric-cyan pb-1 transition-colors duration-300" href="proof.html">Proof</a>
       </div>
       <div class="flex items-center justify-end gap-3">
-        <a class="hidden sm:inline-flex items-center bg-electric-cyan text-obsidian-base font-label-md px-5 py-2 rounded-lg font-bold transition-transform hover:scale-105" href="contact.html">Contact</a>
+        <a class="hidden sm:inline-flex items-center px-6 py-2 rounded-lg font-label-md text-label-md bg-electric-cyan text-obsidian-base font-bold shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:scale-105 transition-all" href="contact.html">Contact</a>
         <!-- Hamburger -->
-        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded hover:bg-white/5 transition-all" aria-label="Toggle menu">
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded hover:bg-white/5 transition-all" aria-label="Toggle menu" aria-expanded="false">
           <span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
           <span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
           <span class="hamburger-line block w-5 h-0.5 bg-on-surface transition-all duration-300"></span>
@@ -63,13 +63,15 @@
 
   <main id="main-content" class="pt-16 md:pt-20">
     <!-- Hero Section -->
-    <section class="relative -mt-16 md:-mt-20 pt-[104px] md:pt-36 pb-8 md:pb-12 px-4 md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-electric-cyan/30 bg-electric-cyan/5 mb-6 md:mb-8">
-        <span class="flex h-2 w-2 rounded-full bg-electric-cyan animate-pulse"></span>
-        <span class="font-label-sm text-label-sm uppercase tracking-widest text-electric-cyan">Field-Proven Deployments</span>
+    <section class="relative -mt-16 md:-mt-20 pt-16 md:pt-20 min-h-[819px] flex items-center px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+      <div class="relative z-10 w-full">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-electric-cyan/30 bg-electric-cyan/5 mb-6 md:mb-8">
+          <span class="flex h-2 w-2 rounded-full bg-electric-cyan animate-pulse"></span>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-electric-cyan">Field-Proven Deployments</span>
+        </div>
+        <h1 class="hero-headline font-bold leading-tight mb-5 md:mb-6 max-w-3xl text-white">Where Nucleus has <span class="text-electric-cyan">delivered.</span></h1>
+        <p class="text-base md:text-body-lg text-on-surface-variant max-w-2xl border-l-2 border-electric-cyan/30 pl-4 md:pl-6 py-1">Four engagements. One standard: high-stakes, security-critical, at scale.</p>
       </div>
-      <h1 class="hero-headline font-bold leading-tight mb-5 md:mb-6 max-w-3xl">Where Nucleus has <span class="text-electric-cyan">delivered.</span></h1>
-      <p class="text-base md:text-body-lg text-on-surface-variant max-w-2xl border-l-2 border-electric-cyan/30 pl-4 md:pl-6 py-1">Four engagements. One standard: high-stakes, security-critical, at scale.</p>
     </section>
 
     <!-- Case Studies Grid -->
@@ -139,7 +141,7 @@
         <div class="inline-block px-3 py-1 mb-4 rounded bg-electric-cyan/10 border border-electric-cyan/20 text-electric-cyan font-label-sm text-label-sm uppercase tracking-widest">
           Ownership Model
         </div>
-        <h2 class="section-headline font-semibold mb-5 md:mb-6">Built to own what it builds</h2>
+        <h2 class="section-headline font-semibold mb-5 md:mb-6 text-white">Built to own what it builds</h2>
         <p class="text-base md:text-body-lg text-white mb-4">Nucleus isn't a systems integrator reselling someone else's technology.</p>
         <p class="text-on-surface-variant">Nucleus operates as one company with two connected strengths. The larger of the two is a technology deployment and advisory practice — the engine that put Nucleus infrastructure inside <span class="text-electric-cyan">Colgate's</span> global surveillance network, <span class="text-electric-cyan">Woolworths'</span> national footprint, <span class="text-electric-cyan">FIFA World Cup</span> stadia, and <span class="text-electric-cyan">Sasol's</span> critical operations. The second is a strategic investment and IP portfolio that reinforces the first: proof that Nucleus doesn't just implement, it invents.</p>
       </div>
@@ -182,7 +184,7 @@
     <section class="py-16 md:py-32 px-4 md:px-margin-desktop relative overflow-hidden">
       <div class="absolute inset-0 bg-surface-navy pointer-events-none opacity-50"></div>
       <div class="relative z-10 max-w-4xl mx-auto text-center glass-card p-8 sm:p-12 md:p-20 border border-white/10 rounded-2xl">
-        <h2 class="section-headline font-bold mb-5 md:mb-6">The technology behind <span class="text-electric-cyan">the proof.</span></h2>
+        <h2 class="section-headline font-bold mb-5 md:mb-6 text-white">The technology behind <span class="text-electric-cyan">the proof.</span></h2>
         <p class="text-base md:text-body-lg text-on-surface-variant mb-8 md:mb-12 max-w-2xl mx-auto">MTLS, Meerkat, and the rest of the proprietary stack that makes deployments like these possible — explore the IP and investment portfolio behind the delivery record.</p>
         <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
           <a class="bg-electric-cyan text-obsidian-base font-bold px-8 md:px-10 py-3.5 md:py-4 rounded-lg hover:brightness-110 transition-all inline-flex items-center justify-center gap-2" href="investments-ip.html">
@@ -201,7 +203,7 @@
   <footer class="bg-obsidian-base border-t border-white/5 py-12 md:py-20">
     <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-gutter px-4 md:px-12 max-w-container-max mx-auto">
       <div class="col-span-2 md:col-span-1">
-        <a class="font-headline-md text-headline-md font-bold text-on-surface mb-4 md:mb-6 inline-block hover:text-electric-cyan transition-colors" href="index.html">Nucleus.io</a>
+        <a class="inline-block mb-4 md:mb-6 hover:opacity-80 transition-opacity" href="index.html"><img src="assets/logo.png" alt="Nucleus.io" class="h-6 md:h-8 w-auto"></a>
         <p class="text-on-surface-variant text-sm md:pr-8">Pioneering the architecture of tomorrow's intelligence. Secure. Scalable. Sovereign.</p>
       </div>
       <div>
