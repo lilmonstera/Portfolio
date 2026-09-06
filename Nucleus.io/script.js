@@ -39,34 +39,64 @@ if (mobileMenuBtn && mobileMenu) {
     });
 }
 
-// Contact form submission -> mailto
+// Shared submit handler: posts a form to Web3Forms so submissions land
+// reliably in the team's inbox instead of depending on the visitor having
+// a configured email client.
+async function submitToWeb3Forms(form, { onSuccess, onError, submitButton } = {}) {
+    if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.classList.add('opacity-60', 'cursor-not-allowed');
+    }
+
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { Accept: 'application/json' },
+            body: new FormData(form)
+        });
+        const result = await response.json();
+
+        if (result.success) {
+            form.reset();
+            if (onSuccess) onSuccess();
+        } else {
+            throw new Error(result.message || 'Submission failed');
+        }
+    } catch (error) {
+        if (onError) onError(error);
+    } finally {
+        if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.classList.remove('opacity-60', 'cursor-not-allowed');
+        }
+    }
+}
+
+// Contact form submission
 const contactForm = document.getElementById('contact-form');
 const contactConfirmation = document.getElementById('contact-confirmation');
+const contactSubmitButton = document.getElementById('contact-submit');
 
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const name = document.getElementById('contact-name').value;
-        const email = document.getElementById('contact-email').value;
-        const organization = document.getElementById('contact-org').value;
-        const inquiry = document.getElementById('contact-inquiry').value;
-        const message = document.getElementById('contact-message').value;
-
-        const body = `Name: ${name}\nEmail: ${email}\nOrganization: ${organization}\nInquiry Type: ${inquiry}\n\nProject Overview:\n${message}`;
-        const subject = 'You got mail from your website!';
-        const mailtoLink = `mailto:jayson@nucleustech.online?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        window.location.href = mailtoLink;
-
-        if (contactConfirmation) {
-            contactConfirmation.classList.remove('hidden');
-            contactConfirmation.classList.add('flex');
-        }
+        submitToWeb3Forms(contactForm, {
+            submitButton: contactSubmitButton,
+            onSuccess: () => {
+                if (contactConfirmation) {
+                    contactConfirmation.classList.remove('hidden');
+                    contactConfirmation.classList.add('flex');
+                }
+            },
+            onError: () => {
+                alert("Something went wrong sending your request. Please email jayson@nucleustech.online directly.");
+            }
+        });
     });
 }
 
-// Homepage hero lead capture -> mailto
+// Homepage hero lead capture
 const heroLeadForm = document.getElementById('hero-lead-form');
 const heroLeadConfirmation = document.getElementById('hero-lead-confirmation');
 
@@ -74,16 +104,15 @@ if (heroLeadForm) {
     heroLeadForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const email = document.getElementById('hero-lead-email').value;
-
-        const body = `Corporate Email: ${email}\n\nRequesting an introductory conversation with the Nucleus team.`;
-        const subject = 'You got mail from your website!';
-        const mailtoLink = `mailto:jayson@nucleustech.online?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        window.location.href = mailtoLink;
-
-        if (heroLeadConfirmation) {
-            heroLeadConfirmation.classList.remove('hidden');
-        }
+        submitToWeb3Forms(heroLeadForm, {
+            onSuccess: () => {
+                if (heroLeadConfirmation) {
+                    heroLeadConfirmation.classList.remove('hidden');
+                }
+            },
+            onError: () => {
+                alert("Something went wrong sending your details. Please email jayson@nucleustech.online directly.");
+            }
+        });
     });
 }

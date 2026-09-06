@@ -178,8 +178,8 @@
               <span class="flex h-2 w-2 rounded-full bg-electric-cyan animate-pulse"></span>
               <span class="font-label-sm text-label-sm uppercase tracking-widest text-electric-cyan">Launching Soon</span>
             </div>
-            <h2 class="section-headline font-semibold mb-4 md:mb-5 text-white">New Verification Service Addition: <span class="text-electric-cyan">Identity Verification.</span></h2>
-            <p class="text-base md:text-body-lg text-on-surface-variant max-w-2xl mb-6 md:mb-8">Nucleus is launching biometric identity verification, cross-checked in real time against Home Affairs databases, Enatis vehicle records, Police and criminal clearances, and credit status and risk data. It's a new, standalone offering — the next step in how Nucleus confirms not just what a camera sees, but who's really there.</p>
+            <h2 class="section-headline font-semibold mb-4 md:mb-5 text-white">New Verification Service: <span class="text-electric-cyan">Identity Verification.</span></h2>
+            <p class="text-base md:text-body-lg text-on-surface-variant max-w-2xl mb-6 md:mb-8">Developed, owned and now launching biometric identity verification, cross-checked in real time against Home Affairs databases, Enatis vehicle records, Police and criminal clearances, credit status and risk data. It's a new, standalone product — preventing & confirming what the camera sees to "who's really there".</p>
             <div class="flex flex-wrap gap-3 mb-6">
               <span class="bg-surface-navy/50 border border-white/5 px-4 py-2 rounded-full text-xs md:text-sm font-label-md text-on-surface-variant">Home Affairs Database</span>
               <span class="bg-surface-navy/50 border border-white/5 px-4 py-2 rounded-full text-xs md:text-sm font-label-md text-on-surface-variant">Enatis Verification</span>
@@ -298,14 +298,17 @@
       <div class="relative z-10 max-w-4xl mx-auto text-center glass-card p-8 sm:p-12 md:p-20 border border-white/10 rounded-2xl">
         <h2 class="section-headline font-bold mb-5 md:mb-6 text-white">One Company. <span class="text-electric-cyan">Two Ways In.</span></h2>
         <p class="text-base md:text-body-lg text-on-surface-variant mb-8 md:mb-12"> Whether you're exploring investment, need a solution strategy, or ready to deploy — we want to hear from you.</p>
-        <form id="hero-lead-form" class="max-w-md mx-auto flex flex-col gap-4">
+        <form id="hero-lead-form" action="https://api.web3forms.com/submit" method="POST" class="max-w-md mx-auto flex flex-col gap-4">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"/>
+          <input type="hidden" name="subject" value="New Lead — Start the Conversation (Nucleus.io)"/>
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off"/>
           <div class="relative">
             <label for="hero-lead-email" class="sr-only">Corporate Email</label>
             <input id="hero-lead-email" name="email" required class="w-full bg-obsidian-base border border-white/10 rounded-lg px-5 md:px-6 py-3.5 md:py-4 focus:outline-none focus:ring-2 focus:ring-electric-cyan focus:border-electric-cyan transition-colors text-on-surface" placeholder="Corporate Email" type="email"/>
           </div>
           <button type="submit" class="bg-electric-cyan text-obsidian-base font-bold px-8 md:px-10 py-3.5 md:py-4 rounded-lg hover:brightness-110 transition-all">Start the Conversation</button>
           <p class="text-xs text-on-surface-variant mt-2 md:mt-4">By submitting, you agree to be contacted by the Nucleus team.</p>
-          <p id="hero-lead-confirmation" class="hidden text-sm text-electric-cyan mt-2" role="status">Thanks — your mail client should now be open with your request ready to send.</p>
+          <p id="hero-lead-confirmation" class="hidden text-sm text-electric-cyan mt-2" role="status">Thanks — we've received your details and the Nucleus team will be in touch shortly.</p>
         </form>
       </div>
     </section>

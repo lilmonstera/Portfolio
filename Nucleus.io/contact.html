@@ -70,7 +70,7 @@
             <span class="flex h-2 w-2 rounded-full bg-electric-cyan animate-pulse"></span>
             <span class="font-label-sm text-label-sm uppercase tracking-widest text-electric-cyan"> Learn More</span>
           </div>
-          <h1 class="hero-headline font-bold leading-tight text-white">Initiate Technical <span class="text-electric-cyan">Briefing.</span></h1>
+          <h1 class="hero-headline font-bold leading-tight text-white">Initiate a Free Advisory <span class="text-electric-cyan">Briefing.</span></h1>
           <p class="text-base md:text-body-lg text-on-surface-variant max-w-2xl">Connect with our systems architects to map your technical requirements to a high-stakes deployment strategy. Precision execution starts with strategic alignment.</p>
         </div>
         <div class="lg:col-span-4 hidden lg:block">
@@ -92,7 +92,10 @@
         <!-- Primary Form Panel -->
         <div class="md:col-span-12 glass-card border border-white/10 rounded-xl p-6 md:p-8">
           <h2 class="card-headline font-semibold mb-6 pb-4 border-b border-white/10">Technical Briefing Request</h2>
-          <form id="contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"/>
+            <input type="hidden" name="subject" value="New Technical Briefing Request — Nucleus.io"/>
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off"/>
             <div class="flex flex-col gap-2">
               <label for="contact-name" class="font-label-sm text-label-sm uppercase text-on-surface-variant">Full Name</label>
               <input id="contact-name" name="name" required class="w-full bg-obsidian-base border border-white/10 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:ring-2 focus:ring-electric-cyan focus:border-electric-cyan transition-colors" placeholder="e.g. Dr. Aris Thorne" type="text"/>
@@ -136,7 +139,7 @@
             </div>
             <div id="contact-confirmation" class="md:col-span-2 hidden items-center gap-2 rounded-lg border border-electric-cyan/30 bg-electric-cyan/5 px-4 py-3 text-electric-cyan text-sm">
               <span class="material-symbols-outlined text-base" aria-hidden="true">check_circle</span>
-              <span>Thanks — your mail client should now be open with your request ready to send to jayson@nucleustech.online.</span>
+              <span>Thanks — your request has been sent to the Nucleus team. We'll be in touch shortly.</span>
             </div>
           </form>
         </div>
