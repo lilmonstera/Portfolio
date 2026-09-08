@@ -1,0 +1,48 @@
+name: Build Tailwind CSS
+
+on:
+  push:
+    branches: [app.py]
+    paths:
+      - "Nucleus.io/*.html"
+      - "Nucleus.io/tailwind.config.js"
+      - "Nucleus.io/tailwind.input.css"
+      - "Nucleus.io/package.json"
+      - "Nucleus.io/package-lock.json"
+
+permissions:
+  contents: write
+
+jobs:
+  build-css:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        working-directory: Nucleus.io
+        run: npm ci
+
+      - name: Build tailwind.css
+        working-directory: Nucleus.io
+        run: npm run build:css
+
+      - name: Commit tailwind.css if it changed
+        working-directory: Nucleus.io
+        run: |
+          if git diff --quiet -- tailwind.css; then
+            echo "tailwind.css already up to date, nothing to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add tailwind.css
+            git commit -m "chore: rebuild tailwind.css [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
